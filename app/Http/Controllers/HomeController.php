@@ -69,7 +69,7 @@ class HomeController extends Controller
     {
         $subscriber = new subscriber;
         $subscriber->email =  $req->get('email');
-        // $subscriber->save();
+        $subscriber->save();
         $to_name = "My Name";
         $to_email = $req->get('email');
         $data = [

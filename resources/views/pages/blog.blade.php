@@ -28,7 +28,8 @@
 
   <div class=" row mx-3 my-5">
   <div class="container my-3 px-5 col-8">
-     <p style=""><pre style="white-space:pre-wrap;font-size:1.3em">{!!$blog->content!!}</pre></p>
+  {!!$blog->content!!}
+     <p style=""><pre style="white-space:pre-wrap;font-size:1.3em"></pre></p>
      
      <button type="button" class="btn mt-3 btn-primary" data-toggle="modal" data-target="#reportModal">Report this Blog</button>
     </div>

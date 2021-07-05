@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand text-white font-weight-bold" href="{{route('index')}}">{{env('BRAND_NAME')}}</a>
+    <a class="navbar-brand text-white font-weight-bold" href="{{route('index')}}"><img src="{{asset('public/images/favicon.png')}}" style="height:40px;display:inline;"/>&nbsp;&nbsp;{{env('BRAND_NAME')}}</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -13,7 +13,7 @@
       <i class="fas fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <!--<ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="text-white nav-link active" aria-current="page" href="{{ route('index')}}">Home</a>
         </li>
@@ -25,7 +25,7 @@
             >Disabled</a
           >
         </li> --}}
-      </ul>
+      </ul>-->
       {{-- <form class="d-flex input-group w-auto">
         <div class="row btn-outline-light p-0 rounded bg-light" >
           <div class="col-10 p-0 m-0 " id="the-basics">

@@ -28,7 +28,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 // General Routes
-Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/', [HomeController::class, 'blogs'])->name('index');
 Route::get('/blog/{id}', [HomeController::class, 'blog'])->name('blog');
 Route::get('/blogs/{id?}', [HomeController::class, 'blogs'])->name('blogs');
 Route::post('/subscribe', [HomeController::class, 'addsubscriber']);
