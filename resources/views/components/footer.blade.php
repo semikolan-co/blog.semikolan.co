@@ -41,7 +41,7 @@
   </div>
   
   
-  <div class="footer-copyright text-center py-3 bg-black">© 2020 Copyright:
+  <div class="footer-copyright text-center py-3 bg-black">© 2021 Copyright:
     <a href="https://semikolan.co/"> semikolan.co</a>
   </div>
 

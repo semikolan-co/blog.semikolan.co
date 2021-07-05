@@ -37,7 +37,7 @@
             {{-- <a class="btn btn-primary">Read More..</a> --}}
           </div>
           <div class="card-foot text-right pb-4 pr-4  text-secondary" style="//color:#b8b4b4">
-            <a href="{{ route('blog', ['id' => $blog->id]) }}" class=" text-secondary" style="//color:#b8b4b4"><i class="fas fa-eye"></i> Read More</a>
+            <a href="{{ route('blog', ['slug' => $blog->slug]) }}" class=" text-secondary" style="//color:#b8b4b4"><i class="fas fa-eye"></i> Read More</a>
             <span class="ml-4" style="cursor: pointer"><i class="far fa-bookmark"></i></span>
           </div>
     </div>
