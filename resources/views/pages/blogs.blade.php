@@ -13,7 +13,7 @@
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
           <h1 class="mb-3 display-4 font-weight-bold">All Blogs</h1>
-          <h4 class="mb-3">Just a Random line that I will correct in Future</h4>
+          <h4 class="mb-3">Just a Random line that I will correct in Future.</h4>
        
      <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#subscribeModal">Subscribe</button>
 
