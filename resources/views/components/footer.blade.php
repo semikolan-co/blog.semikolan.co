@@ -1,15 +1,15 @@
 
-<footer class="page-footer font-small text-white bg-dark pt-4">
+<footer class="page-footer font-small text-white pt-4" style="background: var(--darkerShade);">
 
   <div class="container">
 
-    <div class="row py-3 pb-4">
+    <div class="row pb-4">
 
 
       <div class="col-md-6">
 
 
-        <span class="display-5">{{env('BRAND_NAME')}}</span>
+        <span class="display-6"><img src="{{asset('public/images/favicon.png')}}" style="height:40px;display:inline;"/>&nbsp;&nbsp;{{env('BRAND_NAME')}}</span>
         
 
 
@@ -24,9 +24,9 @@
           {{-- <input name="email" type="text" class="form-control form-control" placeholder="Your email"
             aria-label="Your email" aria-describedby="basic-addon2"> --}}
        
-  <input type="text" name="email" class="form-control" placeholder="Enter Your Email" >
+  <input type="email" required name="email" class="form-control" placeholder="Enter Your Email" >
   <div class="input-group-append">
-    <button type="button" class="input-group-text" id="basic-addon2">Subscribe Newsleter</button>
+    <button type="submit" style="background:var(--blue);color:white;" class="input-group-text" id="basic-addon2">Subscribe Newsleter</button>
   </div>
         </form>
 
@@ -41,8 +41,8 @@
   </div>
   
   
-  <div class="footer-copyright text-center py-3 bg-black">© 2021 Copyright:
-    <a href="https://semikolan.co/"> semikolan.co</a>
+  <div class="footer-copyright text-center py-3" style="background: var(--darkestShade);color:#fffa;">© 2021 Copyright:
+    <a style="color:var(--green); text-decoration:none;" href="https://semikolan.co/"> semikolan.co</a>
   </div>
 
   

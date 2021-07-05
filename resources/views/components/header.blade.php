@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg" style="background: var(--darkerShade);">
-  <div class="container-fluid">
+  <div class="container">
     <a class="navbar-brand text-white font-weight-bold" href="{{route('index')}}"><img src="{{asset('public/images/favicon.png')}}" style="height:40px;display:inline;"/>&nbsp;&nbsp;{{env('BRAND_NAME')}}</a>
     <button
       class="navbar-toggler"
