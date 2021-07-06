@@ -31,6 +31,7 @@
   {!!$blog->content!!}
     </div>
     <div class="col-4 my-3">
+     @include('modals.recentblogs')
      @include('modals.reportnew')
     </div>
   </div>

@@ -47,7 +47,8 @@ class HomeController extends Controller
     {
         $blog = blog::where('slug',$slug)->get();
         $blog = $blog[0];
-        return view('pages/blog', ['blog' => $blog]);
+        $blogs = blog::where('active',1)->skip(0)->take(5)->latest('updated_at')->get();
+        return view('pages/blog', ['blog' => $blog,'blogs' => $blogs]);
         // return $blog;
     }
     public function blogs(int $id=0)

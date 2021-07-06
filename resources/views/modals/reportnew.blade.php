@@ -7,7 +7,7 @@
         background: var(--darkestShade);color:#fffa;
     }
     </style>
-        <div class="modal-content" style="  background: var(--darkerShade);">
+        <div class="modal-content mb-5" style="  background: var(--darkerShade);">
             <div class="modal-header" style="border-bottom: 1px solid #dee2e699;">
                 <h5 class="modal-title" id="exampleModalLabel">Report "{{ $blog->title }}"</h5>
                 {{-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
