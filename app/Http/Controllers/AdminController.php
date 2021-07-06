@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\blog;
 use App\Models\subscriber;
 use App\Models\report;
+use Auth;
 
 use Mail;
 
@@ -93,7 +94,12 @@ class AdminController extends Controller
         $blog = new blog;
         $blog->title =  $req->get('title');
         $blog->subtitle =  $req->get('subtitle');
-        $blog->author =  $req->get('author');
+        $blog->author =  Auth::user()->name;
+        $blog->slug =  $req->get('slug');
+        $blog->tags =  $req->get('tags');
+        $blog->category =  $req->get('category');
+        $blog->readtime =  $req->get('readtime');
+        $blog->subcategory =  $req->get('subcategory');
         $blog->active =  ($req->get('active') == 'on') ? 1 : 0;
         $blog->content =  $req->get('content');
         $blog->image =  "image_name.png";
@@ -106,7 +112,12 @@ class AdminController extends Controller
         $blog = blog::find($id);
         $blog->title =  $req->get('title');
         $blog->subtitle =  $req->get('subtitle');
-        $blog->author =  $req->get('author');
+        $blog->author =  Auth::user()->name;
+        $blog->slug =  $req->get('slug');
+        $blog->tags =  $req->get('tags');
+        $blog->category =  $req->get('category');
+        $blog->readtime =  $req->get('readtime');
+        $blog->subcategory =  $req->get('subcategory');
         $blog->active =  ($req->get('active') == 'on') ? 1 : 0;
         $blog->content =  $req->get('content');
         $blog->image =  "image_name.png";

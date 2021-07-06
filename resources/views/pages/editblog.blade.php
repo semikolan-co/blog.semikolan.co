@@ -36,12 +36,54 @@
                     </div>
                     <div class="control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Author</label>
-                            <input name="author" value="{{$blog['author']}}" type="text" class="form-control" placeholder="Author" id="phone"
+                            <label>Slug</label>
+                            <input name="slug" value="{{$blog['slug']}}" type="text" class="form-control" placeholder="Slug" id="phone"
                                 required data-validation-required-message="Please enter your phone number.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
+                    <div class="control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Read Time</label>
+                            <input name="readtime" value="{{$blog['readtime']}}" type="text" class="form-control" placeholder="5" id="phone"
+                                required data-validation-required-message="Please enter your phone number.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Tags</label>
+                            <input name="tags" value="{{$blog['tags']}}" type="text" class="form-control" placeholder="Technology" id="phone"
+                                required data-validation-required-message="Please enter your phone number.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+
+                      
+                    <div class="control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Category</label>
+                            <select name="category" required class="form-select form-select-lg" aria-label=".form-select-lg example">
+                                <option selected disabled>Category</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Sub-Category</label>
+                            <select name="subcategory" required class="form-select form-select-lg" aria-label=".form-select-lg example">
+                                <option selected disabled>Sub-Category</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                        </div>
+                    </div>
+
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls">
                             <div class="custom-control custom-switch">
