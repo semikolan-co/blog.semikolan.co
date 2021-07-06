@@ -1,6 +1,14 @@
-
-        <div class="modal-content">
-            <div class="modal-header">
+<style>
+    .form-control{
+        background: var(--darkestShade);color:#fffa;
+        border:none;
+    }
+    .form-control:active,.form-control:hover,.form-control:focus{
+        background: var(--darkestShade);color:#fffa;
+    }
+    </style>
+        <div class="modal-content" style="  background: var(--darkerShade);">
+            <div class="modal-header" style="border-bottom: 1px solid #dee2e699;">
                 <h5 class="modal-title" id="exampleModalLabel">Report "{{ $blog->title }}"</h5>
                 {{-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -23,9 +31,9 @@
                         <textarea name="report" class="form-control" id="message-text"></textarea>
                     </div>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer" style="border-top: 1px solid #dee2e699;">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-danger">Report</button>
+                    <button type="submit" style="background-color:var(--blue);color:white;"class="btn">Report</button>
                 </div>
             </form>
         </div>

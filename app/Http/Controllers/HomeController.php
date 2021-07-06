@@ -43,9 +43,9 @@ class HomeController extends Controller
         return view('pages/page')->with('val',$val);
     }
 
-    public function blog(int $id)
+    public function blog($slug)
     {
-        $blog = blog::where('id',$id)->get();
+        $blog = blog::where('slug',$slug)->get();
         $blog = $blog[0];
         return view('pages/blog', ['blog' => $blog]);
         // return $blog;
