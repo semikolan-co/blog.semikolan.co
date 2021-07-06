@@ -32,7 +32,7 @@
     <div class="card" style="height: 100%">
         <img class="card-img-top" src="https://html.com/wp-content/uploads/html-tutorial-beginners-header.jpg" alt="Card image cap">
         <div class="card-body">
-            <a href="{{ route('blog', ['slug' => $blog->slug]) }}"><h5 class="card-title">{{$blog->title}}</h5></a>
+            <a href="{{ route('blog', ['slug' => $blog->slug]) }}" style="text-decoration: none"><h5 class="card-title">{{$blog->title}}</h5></a>
             <p class="card-text">{{$blog->subtitle}}</p>
             {{-- <a class="btn btn-primary">Read More..</a> --}}
           </div>
