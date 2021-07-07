@@ -127,6 +127,13 @@ class AdminController extends Controller
     }
 
 
+    public function changeBlogStatus(int $id){
+        $blog = blog::find($id);
+        $blog->active =  !($blog->active);
+        $blog->save();
+        return redirect()->back();
+    }
+
     public function sendmail(Request $req)
     {
         $to_email = explode('----',$req->get('emails'));

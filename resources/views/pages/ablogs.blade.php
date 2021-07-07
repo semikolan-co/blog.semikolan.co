@@ -25,19 +25,26 @@
                             <tbody>
 
                                 @foreach ($blogs as $blog)
-                                <tr>
-                                    <th scope="row">{{$loop->iteration}}</th>
-                                    <td>{{$blog->title}}</td>
-                                    <td><span class=" badge 
-                                        @if($blog->active)
-                                        badge-success">Active
-                                        @else
-                                        badge-secondary">Inactive
-                                        @endif
-                                    </span></td>
-                                    <td><a href="{{ route('edit', ['id' => $blog->id]) }}"><i class="fa fa-edit text-black"></i></a></td>
-                                </tr>
-                                    
+                                    <tr>
+                                        <th scope="row">{{ $loop->iteration }}</th>
+                                        <td>{{ $blog->title }}</td>
+                                        <td>
+                                            <form method="POST"
+                                                action="{{ route('changeBlogStatus', ['id' => $blog->id]) }}">
+                                                @csrf
+                                                <button type="submit" class="btn btn-sm 
+                                                    @if ($blog->active) 
+                                                        btn-success"><i class="fa fa-check"></i>
+                                                    @else
+                                                        bg-secondary"><i class="fa fa-times"></i> 
+                                                    @endif
+                                                </button>
+                                            </form>
+                                        </td>
+                                        <td><a href="{{ route('edit', ['id' => $blog->id]) }}"><i
+                                                    class="fa fa-edit text-black"></i></a></td>
+                                    </tr>
+
                                 @endforeach
                             </tbody>
                         </table>

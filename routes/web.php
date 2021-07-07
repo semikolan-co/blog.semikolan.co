@@ -45,7 +45,7 @@ Route::get('addblog', [AdminController::class, 'addblog'])->name('addblog');
 Route::post('/addblog', [AdminController::class, 'addblogtodb']);
 Route::post('/sendmail', [AdminController::class, 'sendmail']);
 Route::post('/edit/{id}', [AdminController::class, 'editblog']);
-
+Route::post('/changeBlogStatus/{id}', [AdminController::class, 'changeBlogStatus'])->name('changeBlogStatus');
 
 // Testing Routes
 Route::get('previewmail/{mailname}', [AdminController::class, 'previewmail'])->name('previewmail');
