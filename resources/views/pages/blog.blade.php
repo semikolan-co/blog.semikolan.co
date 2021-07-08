@@ -27,10 +27,10 @@
 
 <div style="background: var(--darkestShade);color:#fffa;font-size:1.2em;word-spacing:0.2em;">
   <div class=" row mx-3 py-5">
-  <div class="my-3 px-5 col-8" style="text-align: justify;">
+  <div class="my-3 px-5 col-md-8" style="text-align: justify;">
   {!!$blog->content!!}
     </div>
-    <div class="col-4 my-3">
+    <div class="col-md-4 my-3">
      @include('modals.recentblogs')
      @include('modals.reportnew')
     </div>

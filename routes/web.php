@@ -37,15 +37,21 @@ Route::post('/report', [HomeController::class, 'report']);
 // Admin Routes
 Route::get('dash', [AdminController::class, 'index'])->name('dash');
 Route::get('ablogs', [AdminController::class, 'ablogs'])->name('ablogs');
+Route::get('thecategory', [AdminController::class, 'thecategory'])->name('thecategory');
+Route::get('thesubcategory', [AdminController::class, 'thesubcategory'])->name('thesubcategory');
 Route::get('email', [AdminController::class, 'email'])->name('email');
 Route::get('subscriber', [AdminController::class, 'subscriber'])->name('subscriber');
 Route::get('reports', [AdminController::class, 'reports'])->name('reports');
 Route::get('/edit/{id}', [AdminController::class, 'edit'])->name('edit');
 Route::get('addblog', [AdminController::class, 'addblog'])->name('addblog');
 Route::post('/addblog', [AdminController::class, 'addblogtodb']);
+Route::post('/addCategory', [AdminController::class, 'addCategory'])->name('addCategory');
+Route::post('/addSubcategory', [AdminController::class, 'addSubcategory'])->name('addSubcategory');
 Route::post('/sendmail', [AdminController::class, 'sendmail']);
 Route::post('/edit/{id}', [AdminController::class, 'editblog']);
 Route::post('/changeBlogStatus/{id}', [AdminController::class, 'changeBlogStatus'])->name('changeBlogStatus');
+Route::post('/changeCategoryStatus/{id}', [AdminController::class, 'changeCategoryStatus'])->name('changeCategoryStatus');
+Route::post('/changeSubcategoryStatus/{id}', [AdminController::class, 'changeSubcategoryStatus'])->name('changeSubcategoryStatus');
 
 // Testing Routes
 Route::get('previewmail/{mailname}', [AdminController::class, 'previewmail'])->name('previewmail');

@@ -63,12 +63,16 @@
                     <div class="control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Category</label>
-                            <select name="category" required class="form-select form-select-lg" aria-label=".form-select-lg example">
-                                <option selected disabled>Category</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
+                            <select name="category" required class="form-select form-select-lg"
+                                aria-label=".form-select-lg example">
+                                <option disabled>Category</option>
+                                @foreach ($categories as $category)
+                                    <option value="{{$category->id}}" 
+                                        @if ($blog['category']==$category['id'])
+                                            selected
+                                        @endif>{{$category->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
 

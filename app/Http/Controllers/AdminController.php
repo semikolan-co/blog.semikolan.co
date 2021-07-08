@@ -8,6 +8,8 @@ use App\Models\User;
 use App\Models\blog;
 use App\Models\subscriber;
 use App\Models\report;
+use App\Models\blog_category;
+use App\Models\blog_subcategory;
 use Auth;
 
 use Mail;
@@ -42,6 +44,23 @@ class AdminController extends Controller
         $param = ['blogs' => $blogs];
         return view('pages/ablogs', $param);
     }
+
+    public function thecategory()
+    {
+        $categories = blog_category::all();
+        $param = ['categories' => $categories];
+        return view('pages/thecategory', $param);
+    }
+
+    public function thesubcategory()
+    {
+        $categories = blog_category::all();
+        $subcategories = blog_subcategory::join('blog_categories', 'blog_subcategories.parent_category', '=', 'blog_categories.id')->select('blog_subcategories.*', 'blog_categories.name')->get();
+        $param = ['categories' => $categories,'subcategories' => $subcategories];
+        return view('pages/thesubcategory', $param);
+        // return $subcategories;
+    }
+
     public function subscriber()
     {
         $subscribers = subscriber::all();
@@ -84,7 +103,8 @@ class AdminController extends Controller
         $blog = $blog[0];
         $param = [
             "blog" => $blog,
-            "way" => 'Edit'
+            "way" => 'Edit',
+            "categories" => blog_category::where('active',1)->get()
         ];
         return view('pages/editblog', $param);
     }
@@ -107,6 +127,26 @@ class AdminController extends Controller
         return redirect(route('edit', ['id' => $blog->id]));
         // return $user->active;
     }
+
+    public function addCategory(Request $req)
+    {
+        $blog = new blog_category;
+        $blog->name =  $req->get('name');
+        $blog->save();
+        return redirect()->back();
+        // return $user->active;
+    }
+
+    public function addSubcategory(Request $req)
+    {
+        $blog = new blog_subcategory;
+        $blog->sname =  $req->get('name');
+        $blog->parent_category =  $req->get('category');
+        $blog->save();
+        return redirect()->back();
+        // return $user->active;
+    }
+
     public function editblog(int $id,Request $req)
     {
         $blog = blog::find($id);
@@ -131,6 +171,19 @@ class AdminController extends Controller
         $blog = blog::find($id);
         $blog->active =  !($blog->active);
         $blog->save();
+        return redirect()->back();
+    }
+    public function changeCategoryStatus(int $id){
+        $category = blog_category::find($id);
+        $category->active =  !($category->active);
+        $category->save();
+        return redirect()->back();
+    }
+
+    public function changeSubcategoryStatus(int $id){
+        $subcategory = blog_subcategory::find($id);
+        $subcategory->active =  !($subcategory->active);
+        $subcategory->save();
         return redirect()->back();
     }
 
