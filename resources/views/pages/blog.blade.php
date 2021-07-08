@@ -6,7 +6,7 @@
     class="text-center bg-image"
     style="
       background-image: url('/public/img/post-bg/post-bg{{rand(0,7)}}.jpg');
-      min-height: 300px;
+      /* min-height: ; */
     "
   >
     <div class="p-5 mask" style="height:100%;background-color: rgba(0, 0, 0, 0.6);">
