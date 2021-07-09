@@ -5,7 +5,7 @@
 @section('content')
 
 <style>
-  .blogcontent *{
+  .blogcontent * 
     color:#fffa !important;
   }
 </style>
