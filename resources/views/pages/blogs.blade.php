@@ -1,3 +1,5 @@
+{{-- <?php $title='Semikolan Blogs | Homepage'; ?> --}}
+
 @extends('layouts.app')
 
 @section('content')
