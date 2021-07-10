@@ -35,13 +35,9 @@
     <div class="p-5 mask" style="height:100%;background-color: rgba(0, 0, 0, 0.6);">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
-          <h1 class="mb-3 display-4 font-weight-bold">All Blog</h1>
-          <h4 class="mb-3">Just a Random line that I will correct in Future</h4>
-          {{-- <a class="btn btn-outline-light btn-lg" href="#!" role="button"
-            data-toggle="modal" data-target="#subscribeModal" >Subscribe</a
-          > --}}
-     <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#subscribeModal">Subscribe</button>
-
+          <h1 class="mb-3 display-4"  style="font-weight:bold">{{$title1}}</h1>
+          <h4 class="mb-3">{{$title2}}</h4>
+       
         </div>
       </div>
     </div>
@@ -59,7 +55,8 @@
 <img class="w-100" src="https://html.com/wp-content/uploads/html-tutorial-beginners-header.jpg" alt="Card image cap">
 </div>
 <div class="col-md-7 d-flex flex-column align-items-start justify-content-center py-md-0 py-3" style="padding:0 5%";>
-<h2 class="">{{$blog->title}}</h2>
+  <h2 class="">{{$blog->title}}</h2>
+  <p>{{ str_replace("&nbsp;"," ",substr(strip_tags($blog->content), 0, 100)) }}...</p>
             <p class=""> By {{$blog->author}}</p>
 </div>
 </div>
