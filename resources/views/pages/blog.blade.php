@@ -36,7 +36,8 @@
 <div class="blogcontent" style="background: var(--darkestShade);color:#fffa;font-size:1.2em;word-spacing:0.2em;">
   <div class=" row mx-3 py-5">
   <div class="my-3 px-5 col-md-8" style="text-align: justify;">
-    <h3 style="border: 1px solid black; border-radius: 2px;">{{$blog->tags}}</h3>
+    {{$blog->category}} -> {{$blog->subcategory}}
+    <h3 style="border: 1px solid white; border-radius: 2px;">{{$blog->tags}}</h3>
     {!!$blog->content!!}
     </div>
     <div class="col-md-4 my-3">
