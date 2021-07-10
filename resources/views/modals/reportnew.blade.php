@@ -1,11 +1,5 @@
 <style>
-    .form-control{
-        background: var(--darkestShade);color:#fffa;
-        border:none;
-    }
-    .form-control:active,.form-control:hover,.form-control:focus{
-        background: var(--darkestShade);color:#fffa;
-    }
+  
     </style>
         <div class="modal-content mb-5" style="  background: var(--darkerShade);">
             <div class="modal-header" style="border-bottom: 1px solid #dee2e699;">

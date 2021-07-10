@@ -31,6 +31,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/', [HomeController::class, 'blogs'])->name('index');
 Route::get('/blog/{slug}', [HomeController::class, 'blog'])->name('blog');
 Route::get('/blogs/{id?}', [HomeController::class, 'blogs'])->name('blogs');
+Route::get('search/{q?}', [HomeController::class, 'search'])->name('search');
+Route::get('tag/{q}', [HomeController::class, 'tag'])->name('tag');
+Route::get('category/{q}', [HomeController::class, 'category'])->name('category');
+Route::get('subcategory/{q}', [HomeController::class, 'subcategory'])->name('subcategory');
 Route::post('/subscribe', [HomeController::class, 'addsubscriber']);
 Route::post('/report', [HomeController::class, 'report']);
 
