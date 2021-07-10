@@ -60,7 +60,6 @@
 </div>
 <div class="col-md-7 d-flex flex-column align-items-start justify-content-center py-md-0 py-3" style="padding:0 5%";>
 <h2 class="">{{$blog->title}}</h2>
-            <p class="">{{$blog->subtitle}}</p>
             <p class=""> By {{$blog->author}}</p>
 </div>
 </div>

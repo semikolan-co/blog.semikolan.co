@@ -21,8 +21,8 @@
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
           <h1 class="mb-3 display-4 font-weight-bold">{{$blog->title}}</h1>
-          <h4 class="mb-3">{{$blog->subtitle}}</h4>
           <h6 class="mb-3"><i>Posted by {{$blog->author}} on {{substr($blog->updated_at, 0, 11)}}</i></h6>
+          <h6 class="mb-3"><i>Read time (in Minutes): {{$blog->readtime}}</i></h6>
           {{-- <a class="btn btn-outline-light btn-lg" href="#!" role="button"
             data-toggle="modal" data-target="#subscribeModal" >Subscribe</a
           > --}}
@@ -36,7 +36,8 @@
 <div class="blogcontent" style="background: var(--darkestShade);color:#fffa;font-size:1.2em;word-spacing:0.2em;">
   <div class=" row mx-3 py-5">
   <div class="my-3 px-5 col-md-8" style="text-align: justify;">
-  {!!$blog->content!!}
+    <h3 style="border: 1px solid black; border-radius: 2px;">{{$blog->tags}}</h3>
+    {!!$blog->content!!}
     </div>
     <div class="col-md-4 my-3">
      @include('modals.recentblogs')

@@ -13,7 +13,7 @@
                 <hr>
                 <form name="sentMessage" id="contactForm" action="@if ($way=='Add' ) /addblog
                 @else
-                                        /edit/{{ $blog->id }} @endif " method=" POST"
+                                    /edit/{{ $blog->id }} @endif " method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="control-group">
@@ -22,15 +22,6 @@
                             <input name="title" type="text" value="{{ $blog['title'] }}" class="form-control"
                                 placeholder="Title" id="name" required
                                 data-validation-required-message="Please enter your name.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls">
-                            <label>SubTitle</label>
-                            <input name="subtitle" type="text" value="{{ $blog['subtitle'] }}" class="form-control"
-                                placeholder="Subtitle" id="email"
-                                data-validation-required-message="Please enter your email address.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -133,72 +124,23 @@
                             }
                         });
                     </script>
-                    {{-- <div class="control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-               <label>Playlist</label>
-               <select name="playlist" class="form-control" placeholder="Slug" id="playlist" required
-                  data-validation-required-message="Please enter your phone number.">
-                  <option value="basic-electronics">Basic Electronics</option>
-                  <option value="arduino-tutorial">Arduino Tutorial</option>
-                  <option value="diy">DIY</option>
-                  <option value="sensor-module">Sensors and Module</option>
-               </select>
-               <p class="help-block text-danger"></p>
-            </div>
-         </div>
-         <div class="control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-               <label>Fritzing Image</label>
-               <input name="fritzing" value="" type="file" class="form-control" placeholder="Fritzing Image" id="phone"
-                  data-validation-required-message="Please enter your phone number.">
-               <p class="help-block text-danger"></p>
-            </div>
-         </div><div class="control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-               <label>Schematic Diagram</label>
-               <input name="schematic" value="" type="file" class="form-control" placeholder="Schematic Diagram" id="phone"
-                  data-validation-required-message="Please enter your phone number.">
-               <p class="help-block text-danger"></p>
-            </div>
-         </div>
-         <div class="control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-               <label>Link</label>
-               <input name="link"  value="" type="text" class="form-control" placeholder="Link" id="phone" required
-                  data-validation-required-message="Please enter your phone number.">
-               <p class="help-block text-danger"></p>
-            </div>
-         </div>
-         <div class="control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-               <label>Tags</label>
-               <input name="tags" type="text" class="form-control" placeholder="Tags" value="" id="phone"    data-validation-required-message="Please enter your phone number.">
-               <p class="help-block text-danger"></p>
-            </div>
-         </div> --}}
+
                     <br>
                     <div id="success"></div>
                     <button type="submit" name="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
                 </form>
-
             </div>
-
-
-
-
-
         </div>
     </div>
     <script>
-
-        $(document).ready(function(){
+        $(document).ready(function() {
             updateSubCategory();
         })
         $('select[name="category"]').on('change', function() {
             updateSubCategory();
         })
 
-        function updateSubCategory(){
+        function updateSubCategory() {
             $('select[name="subcategory"]').attr('disabled', true)
             var html = '<option selected disabled>Sub-Category</option>';
             var value = $('select[name="category"]').val();
