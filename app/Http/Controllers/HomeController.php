@@ -78,7 +78,7 @@ class HomeController extends Controller
             'next' => $next,
             'id' => $id,
             'title1' => 'All Blogs',
-            'title2' => 'Just a Random line that I will correct in Future',
+            'title2' => '',
         ];
         return view('pages/blogs', $param);
         // return $blogs;

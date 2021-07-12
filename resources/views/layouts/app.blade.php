@@ -22,10 +22,22 @@
         color:#fffa;
       }
   </style>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta charset='UTF-8'>
+     <meta name='keywords' content='blog,semikolan,technical,programming,blogs'>
+     <meta name='description' content='Semikolan Blogs is a platform where you can write technical blogs, read useful technical content related to various fields including Website Development, Mobile Appplication Development, Machine Learning, Blockchain and almost everything technological you can think of.'>
+     <meta name='subject' content='SemiKolan Blogs'>
+     <meta name='copyright' content='SemiKolan'>
+     <meta name='language' content='ES'>
+     <meta name='summary' content='Semikolan Blogs is a platform where you can write technical blogs, read useful technical content related to various fields including Website Development, Mobile Appplication Development, Machine Learning, Blockchain and almost everything technological you can think of.'>
+     <meta name='Classification' content='Education/Programming'>
+     <meta name='author' content='SemiKolan, contact@semikolan.co'>
+     <meta name='designer' content='SemiKolan'>
+     <meta name='reply-to' content='contact@semikolan.co'>
+     <meta name='owner' content='SemiKolan'>
+     <meta name='category' content='Education'>
+     <meta name='subtitle' content='A Platform to create and find all your Technical solutions.'>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ isset($title) ? $title : 'Semikolan Blogs | Never Stop Learning' }}</title>
