@@ -159,7 +159,7 @@
                 catId: value
             }, function(data, status) {
                 // alert("Data: " + data + "\nStatus: " + status);
-                var subcategory = "{{$blog->subcategory}}"
+                var subcategory = "{{$blog->subcategory ?? ''}}"
                 data.forEach(cat => {
                     html += `<option value="${cat.id}" ${cat.id==subcategory? "selected":""}>${cat.sname}</option>`
                 });

@@ -85,11 +85,17 @@ class AdminController extends Controller
             "blog" => [
                 "id"=>'',
                 "title" => '',
+                'slug'=>'',
+                'tags'=>'',
+                'category'=>'',
+                'readtime'=>'',
+                'subcategory'=>'',
                 "active" => 1,
                 "content" => '',
                 "author" => ''
             ],
-            "way" => 'Add'
+            "way" => 'Add',
+            "categories" => blog_category::where('active',1)->get()
         ];
         return view('pages/editblog', $param);
         // return $param;
