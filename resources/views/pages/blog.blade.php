@@ -1,4 +1,7 @@
-<?php $title=$blog->title.' | Semikolan Blogs'; ?>
+<?php
+ $title=$blog->title.' | Semikolan Blogs';
+ $keyword=$blog->tags.' ';
+ ?>
 
 @extends('layouts.app')
 
