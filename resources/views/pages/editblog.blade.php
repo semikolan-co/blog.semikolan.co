@@ -113,7 +113,6 @@
                         <div class="form-group floating-label-form-group controls">
                             <label>Content</label>
                             <textarea name="content" rows="25" class="form-control" placeholder="Content" id="editor"
-                                required
                                 data-validation-required-message="Please enter a message.">{{ $blog['content'] }}</textarea>
                             <p class="help-block text-danger"></p>
                         </div>

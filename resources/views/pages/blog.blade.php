@@ -47,7 +47,7 @@
 <div class="blogcontent" style="background: var(--darkestShade);color:#fffa;font-size:1.2em;word-spacing:0.2em;">
   <div class=" row mx-3 py-5">
   <div class="my-3 px-5 col-md-8" style="text-align: justify;">
-    <img src="/storage/app/public/ft_img/{{$blog->image}}" alt="" style="width:100%;border-radius: 10px;margin-bottom:20px">
+    <img src="/public/uploads/ft_img/{{$blog->image}}" alt="" style="width:100%;border-radius: 10px;margin-bottom:20px">
     {!!$blog->content!!}
   <p class="mt-4">Category: <a class="anchor" href="/subcategory/{{$blog->subcategory}}">{{$blog->subcategoryname}}</a> | <a class="anchor" href="/category/{{$blog->category}}">{{$blog->categoryname}}</a> </p> 
     <?php 
