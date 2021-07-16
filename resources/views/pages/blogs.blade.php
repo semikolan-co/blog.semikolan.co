@@ -52,7 +52,7 @@
 <a  class="my-4" href="{{ route('blog', ['slug' => $blog->slug]) }}"  style="color:#fffa; text-decoration:none ;">
 <div class="col-12 mx-auto row"  style="border:3px solid #fff7;">
 <div class="col-md-5 p-0" >
-<img class="w-100" src="https://html.com/wp-content/uploads/html-tutorial-beginners-header.jpg" alt="Card image cap">
+<img class="w-100" src="/storage/app/public/ft_img/{{$blog->image}}" alt="Card image cap">
 </div>
 <div class="col-md-7 d-flex flex-column align-items-start justify-content-center py-md-0 py-3" style="padding:0 5%";>
   <h2 class="">{{$blog->title}}</h2>

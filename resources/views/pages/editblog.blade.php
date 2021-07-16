@@ -2,6 +2,30 @@
 
 @section('content')
 
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
     <div class="container-fluid mt-3">
 
         <div class="row">
@@ -11,12 +35,12 @@
 
                 <h3>{{ $way }} Post</h3>
                 <hr>
-                <form name="sentMessage" id="contactForm" action="@if ($way=='Add' ) /addblog
+                <form enctype="multipart/form-data" name="sentMessage" id="contactForm" action="@if ($way=='Add' ) /addblog
                 @else
-                                    /edit/{{ $blog->id }} @endif " method="POST"
+                                        /edit/{{ $blog->id }} @endif " method="POST"
                     enctype="multipart/form-data">
                     @csrf
-                    <div class="control-group">
+                    <input type="hidden" name="main_image" value="" id="main_image" style=""><div class="control-group">
                         <div class="form-group floating-label-form-group controls">
                             <label>Title</label>
                             <input name="title" type="text" value="{{ $blog['title'] }}" class="form-control"
@@ -95,15 +119,60 @@
                         </div>
                     </div>
 
-                    <!-- Create the editor container -->
-                    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/27.0.0/classic/ckeditor.js"></script> --}}
-                    <!-- include libraries(jQuery, bootstrap) -->
-{{-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">  --}}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-{{-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-                    --}}
+
+                    <div >
+                        <div class=" text-center">
+                            <div id="upload-demo"></div>
+                        </div>
+                        <div class="" style="padding:5%;">
+                            <strong>Select image to crop:</strong>
+                            <input type="file" name="" id="image">
+
+                            <button class="btn btn-primary btn-block upload-image" style="margin-top:2%" type="button">Crop
+                                Image</button>
+                        </div>
+
+                        <div class="">
+                            <div id="preview-crop-image"
+                                style=""></div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <script src="https://cdn.tiny.cloud/1/voorcxwhei9xokxcfmqg0v2pjebx0ztaskdrc2b61gicmxgy/tinymce/5/tinymce.min.js"
+                                        referrerpolicy="origin"></script>
+                    <!-- Create the editor container -->
+                    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script> --}}
+                    <!-- include libraries(jQuery, bootstrap) -->
+                    {{-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"> --}}
+
+                    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+                    {{-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> --}}
+
+                    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
                     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
                     
@@ -117,23 +186,118 @@
                         href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
                     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
                     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
-                    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
+                    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script> --}}
 
                     <!-- include summernote css/js -->
-                    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-                    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+                    {{-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+                    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> --}}
                     <script>
+                        var useDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                        tinymce.init({
+                            selector: '#editor',
+                            plugins: 'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons',
+                            imagetools_cors_hosts: ['picsum.photos'],
+                            menubar: 'file edit view insert format tools table help',
+                            toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
+                            toolbar_sticky: true,
+                            autosave_ask_before_unload: true,
+                            autosave_interval: '30s',
+                            autosave_prefix: '{path}{query}-{id}-',
+                            autosave_restore_when_empty: false,
+                            autosave_retention: '2m',
+                            image_advtab: true,
+                            link_list: [{
+                                    title: 'My page 1',
+                                    value: 'https://www.tiny.cloud'
+                                },
+                                {
+                                    title: 'My page 2',
+                                    value: 'http://www.moxiecode.com'
+                                }
+                            ],
+                            image_list: [{
+                                    title: 'My page 1',
+                                    value: 'https://www.tiny.cloud'
+                                },
+                                {
+                                    title: 'My page 2',
+                                    value: 'http://www.moxiecode.com'
+                                }
+                            ],
+                            image_class_list: [{
+                                    title: 'None',
+                                    value: ''
+                                },
+                                {
+                                    title: 'Some class',
+                                    value: 'class-name'
+                                }
+                            ],
+                            importcss_append: true,
+                            file_picker_callback: function(callback, value, meta) {
+                                /* Provide file and text for the link dialog */
+                                if (meta.filetype === 'file') {
+                                    callback('https://www.google.com/logos/google.jpg', {
+                                        text: 'My text'
+                                    });
+                                }
+
+                                /* Provide image and alt text for the image dialog */
+                                if (meta.filetype === 'image') {
+                                    callback('https://www.google.com/logos/google.jpg', {
+                                        alt: 'My alt text'
+                                    });
+                                }
+
+                                /* Provide alternative source and posted for the media dialog */
+                                if (meta.filetype === 'media') {
+                                    callback('movie.mp4', {
+                                        source2: 'alt.ogg',
+                                        poster: 'https://www.google.com/logos/google.jpg'
+                                    });
+                                }
+                            },
+                            templates: [{
+                                    title: 'New Table',
+                                    description: 'creates a new table',
+                                    content: '<div class="mceTmpl"><table width="98%%"  border="0" cellspacing="0" cellpadding="0"><tr><th scope="col"> </th><th scope="col"> </th></tr><tr><td> </td><td> </td></tr></table></div>'
+                                },
+                                {
+                                    title: 'Starting my story',
+                                    description: 'A cure for writers block',
+                                    content: 'Once upon a time...'
+                                },
+                                {
+                                    title: 'New list with dates',
+                                    description: 'New List with dates',
+                                    content: '<div class="mceTmpl"><span class="cdate">cdate</span><br /><span class="mdate">mdate</span><h2>My List</h2><ul><li></li><li></li></ul></div>'
+                                }
+                            ],
+                            template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
+                            template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
+                            height: 600,
+                            image_caption: true,
+                            quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+                            noneditable_noneditable_class: 'mceNonEditable',
+                            toolbar_mode: 'sliding',
+                            contextmenu: 'link image imagetools table',
+                            skin: useDarkMode ? 'oxide-dark' : 'oxide',
+                            content_css: useDarkMode ? 'dark' : 'default',
+                            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+
+                        });
+
                         // ClassicEditor
                         //     .create( document.querySelector( '#editor' ) )
                         //     .catch( error => {
                         //         console.error( error );
                         //     } );
-                        $('#editor').summernote({
-                            height: 350, //set editable area's height
-                            codemirror: { // codemirror options
-                                theme: 'monokai'
-                            }
-                        });
+                        // $('#editor').summernote({
+                        //     height: 350, //set editable area's height
+                        //     codemirror: { // codemirror options
+                        //         theme: 'monokai'
+                        //     }
+                        // });
                     </script>
 
                     <br>
@@ -143,6 +307,108 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.js"></script>
+    <script type="text/javascript">
+
+var window_height = $(window).height();
+            var window_width = $(window).width();
+            var viewport_height = 0;
+            var viewport_width = 0;
+            if(window_width >= 500)
+            {
+                viewport_width = 480;
+            }
+            else
+            {
+                viewport_width = window_width * 0.8;
+            }
+
+        var resize = $('#upload-demo').croppie({
+            enableExif: true,
+            enableOrientation: true,
+            viewport: { // Default { width: 100, height: 100, type: 'square' } 
+                width: viewport_width,
+                height: viewport_width * (21/40),
+                // type: 'circle' //square
+            },
+            boundary: {
+                width: viewport_width+ 20,
+                height: (viewport_width * (21/40))+20
+            }
+        });
+
+
+        $('#image').on('change', function() {
+
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                resize.croppie('bind', {
+                    url: e.target.result
+                }).then(function() {
+                    console.log('jQuery bind complete');
+                });
+            }
+            reader.readAsDataURL(this.files[0]);
+        });
+
+
+        $('.upload-image').on('click', function(ev) {
+            resize.croppie('result', {
+                type: 'base64',
+                size: 'original',
+                
+            }).then(function(img) {
+                console.log('Ia m at ajax')
+
+                html = '<img src="' + img + '" style="width:100%" />';
+                $("#preview-crop-image").html(html);
+                
+                $('#main_image').attr('value', img);
+
+            });
+        });
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script>
         $(document).ready(function() {
             updateSubCategory();
@@ -159,9 +425,10 @@
                 catId: value
             }, function(data, status) {
                 // alert("Data: " + data + "\nStatus: " + status);
-                var subcategory = "{{$blog->subcategory ?? ''}}"
+                var subcategory = "{{ $blog->subcategory ?? '' }}"
                 data.forEach(cat => {
-                    html += `<option value="${cat.id}" ${cat.id==subcategory? "selected":""}>${cat.sname}</option>`
+                    html +=
+                        `<option value="${cat.id}" ${cat.id==subcategory? "selected":""}>${cat.sname}</option>`
                 });
                 $('select[name="subcategory"]').html(html)
                 $('select[name="subcategory"]').attr('disabled', false)
