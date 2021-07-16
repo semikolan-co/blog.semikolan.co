@@ -209,7 +209,8 @@ class HomeController extends Controller
 
 
     public function category(Request $req, $q)
-    { $q = $q? $q : $req->q;
+    { 
+        $q = $q? $q : $req->q;
         $id = $req->n;
         $noofblogs = 12;
         if ($id == 0) {
@@ -235,7 +236,7 @@ class HomeController extends Controller
             'prev' => $prev,
             'next' => $next,
             'id' => $id,
-            'title1' => 'Category: '.$q,
+            'title1' => 'Category: '.blog_category::where('id',$q)->first()->name,
             'title2' => 'Got '.count($blogs).' Results',
         ];
         return view('pages/blogs', $param);
@@ -245,7 +246,8 @@ class HomeController extends Controller
 
 
     public function subcategory(Request $req, $q)
-    { $q = $q? $q : $req->q;
+    { 
+        // $q = $q? $q : $req->q;
         $id = $req->n;
         $noofblogs = 12;
         if ($id == 0) {
@@ -257,7 +259,7 @@ class HomeController extends Controller
         function make($id,$noofblogs,$q) {
         return blog::where('active', 1)
         ->where(function ($query) use($q) {
-            $query->where('category', '=',$q);
+            $query->where('subcategory', '=',$q);
             
 })
             ->skip($id * $noofblogs)
@@ -271,7 +273,7 @@ class HomeController extends Controller
             'prev' => $prev,
             'next' => $next,
             'id' => $id,
-            'title1' => 'Subcategory: '.blog_subcategory::find($q)->first()->sname,
+            'title1' => 'Subcategory: '.blog_subcategory::where('id',$q)->first()->sname,
             'title2' => 'Got '.count($blogs).' Results',
         ];
         return view('pages/blogs', $param);

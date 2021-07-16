@@ -7,8 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8M4SXXD2B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <title>Simple Sidebar - Start Bootstrap Template</title>
+  gtag('config', 'G-S8M4SXXD2B');
+</script>
+  <title>Admin Panel</title>
 
 
   

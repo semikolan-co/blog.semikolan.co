@@ -39,6 +39,16 @@
      <meta name='category' content='Education'>
      <meta name='subtitle' content='A Platform to create and find all your Technical solutions.'>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8M4SXXD2B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-S8M4SXXD2B');
+    </script>
 
     <title>{{ $title ?? 'Semikolan Blogs | Never Stop Learning' }}</title>
 
