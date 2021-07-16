@@ -11,6 +11,9 @@ use App\Models\report;
 use App\Models\blog_category;
 use App\Models\blog_subcategory;
 use Auth;
+use Illuminate\Support\Str;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 
 use Mail;
 
@@ -153,6 +156,22 @@ class AdminController extends Controller
 
     public function editblog(int $id,Request $req)
     {
+        $fileName = ''; 
+        if(!empty($req->main_image) || $req->main_image != ''){
+            $data = explode(';', $req->main_image);
+            $part = explode("/", $data[0]);
+            $image = $req->main_image;  // your base64 encoded
+            $image = str_replace('data:image/'.$part[1].';base64,', '', $image);
+            $image = str_replace(' ', '+', $image);
+            $fileName = md5(microtime()) .'.'.$part[1];
+            $destinationPath = base_path().'/resources/uploads/';
+            Storage::disk('public')->put('/ft_img/'.$fileName, base64_decode($image));
+        }
+
+
+
+
+
         $blog = blog::find($id);
         $blog->title =  $req->get('title');
         $blog->author =  Auth::user()->name;
@@ -163,7 +182,9 @@ class AdminController extends Controller
         $blog->subcategory =  $req->get('subcategory');
         $blog->active =  ($req->get('active') == 'on') ? 1 : 0;
         $blog->content =  $req->get('content');
-        $blog->image =  "image_name.png";
+        if ($fileName) {
+            $blog->image =  $fileName;
+        }
         $blog->save();
         return redirect(route('edit', ['id' => $blog->id]));
         // return $user->active;
