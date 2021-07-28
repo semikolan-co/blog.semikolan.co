@@ -26,7 +26,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta charset='UTF-8'>
      <meta name='keywords' content='{{$keywords ?? ""}},blog,semikolan,technical,programming,blogs'>
-     <meta name='description' content='Semikolan Blogs is a platform where you can write technical blogs, read useful technical content related to various fields including Website Development, Mobile Appplication Development, Machine Learning, Blockchain and almost everything technological you can think of.'>
+     <meta name='description' content='{{ $description ?? "Semikolan Blogs is a platform where you can write technical blogs, read useful technical content related to various fields including Website Development, Mobile Appplication Development, Machine Learning, Blockchain and almost everything technological you can think of."}}''>
      <meta name='subject' content='SemiKolan Blogs'>
      <meta name='copyright' content='SemiKolan'>
      <meta name='language' content='ES'>
