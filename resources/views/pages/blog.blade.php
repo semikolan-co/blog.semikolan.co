@@ -1,6 +1,7 @@
 <?php
  $title=$blog->title.' | Semikolan Blogs';
  $keyword=$blog->tags.' ';
+ $description= str_replace("&nbsp;"," ",substr(strip_tags($blog->content), 0, 300))."...";
  ?>
 
 @extends('layouts.app')
@@ -10,6 +11,25 @@
 <style>
   .blogcontent *{
     color:#fffa !important;
+
+
+
+    
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
   }
   .anchor{
     color: #fffa;
@@ -46,7 +66,7 @@
 
 <div class="blogcontent" style="background: var(--darkestShade);color:#fffa;font-size:1.2em;word-spacing:0.2em;">
   <div class=" row mx-3 py-5">
-  <div class="my-3 px-5 col-md-8" style="text-align: justify;">
+  <div class="my-3 p-1 px-md-3 px-lg-5 col-md-8" style="text-align: justify;">
     <img src="/public/uploads/ft_img/{{$blog->image}}" alt="" style="width:100%;border-radius: 10px;margin-bottom:20px">
     {!!$blog->content!!}
   <p class="mt-4">Category: <a class="anchor" href="/subcategory/{{$blog->subcategory}}">{{$blog->subcategoryname}}</a> | <a class="anchor" href="/category/{{$blog->category}}">{{$blog->categoryname}}</a> </p> 

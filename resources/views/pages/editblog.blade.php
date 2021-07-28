@@ -61,7 +61,7 @@
                     <div class="control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Read Time</label>
-                            <input name="readtime" value="{{ $blog['readtime'] }}" type="text" class="form-control"
+                            <input name="readtime" value="{{ $blog['readtime'] }}" type="number" max="100" class="form-control"
                                 placeholder="5" id="phone" required
                                 data-validation-required-message="Please enter your phone number.">
                             <p class="help-block text-danger"></p>

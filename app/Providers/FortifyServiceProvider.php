@@ -41,7 +41,7 @@ class FortifyServiceProvider extends ServiceProvider
         });
 
         Fortify::registerView(function () {
-            return "Hiii We are ready to collab";
+            return view('auth.register');
         });
 
         RateLimiter::for('two-factor', function (Request $request) {
