@@ -57,7 +57,7 @@
 <div class="col-md-7 d-flex flex-column align-items-start justify-content-center py-md-0 py-3" style="padding:0 5%";>
   <h2 class="">{{$blog->title}}</h2>
   <p>{{ str_replace("&nbsp;"," ",substr(strip_tags($blog->content), 0, 100)) }}...</p>
-            <p class=""> By {{$blog->author}}</p>
+            <p class=""> By {{$blog->authorname}}</p>
 </div>
 </div>
 </a>
