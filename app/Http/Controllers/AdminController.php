@@ -121,7 +121,7 @@ class AdminController extends Controller
     {
         $blog = new blog;
         $blog->title =  $req->get('title');
-        $blog->author =  Auth::user()->name;
+        $blog->author =  Auth::id();
         $blog->slug =  $req->get('slug');
         $blog->tags =  $req->get('tags');
         $blog->category =  $req->get('category');
@@ -174,7 +174,7 @@ class AdminController extends Controller
 
         $blog = blog::find($id);
         $blog->title =  $req->get('title');
-        $blog->author =  Auth::user()->name;
+        $blog->author =  Auth::id();
         $blog->slug =  $req->get('slug');
         $blog->tags =  $req->get('tags');
         $blog->category =  $req->get('category');
