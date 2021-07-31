@@ -49,7 +49,8 @@ class HomeController extends Controller
         $blog = blog::where('slug', $slug)
             ->join('blog_categories', 'blogs.category', '=', 'blog_categories.id')
             ->join('blog_subcategories', 'blogs.subcategory', '=', 'blog_subcategories.id')
-            ->select('blogs.*', 'blog_categories.name as categoryname', 'blog_subcategories.sname as subcategoryname')
+            ->join('users', 'blogs.author', '=', 'users.id')
+            ->select('blogs.*', 'blog_categories.name as categoryname', 'blog_subcategories.sname as subcategoryname','users.id as authorid','users.name as authorname')
         // ->select('blogs.*', 'blog_categories.name')
             ->get();
         $blog = $blog[0];
@@ -70,7 +71,10 @@ class HomeController extends Controller
         }
         // $prev = blog::skip(($id-1)*$noofblogs)->take($noofblogs)->orderBy('updated_at', 'desc')->count();
 
-        $blogs = blog::where('active', 1)->skip($id * $noofblogs)->take($noofblogs)->latest('updated_at')->get();
+        $blogs = blog::where('active', 1)
+        ->join('users', 'blogs.author', '=', 'users.id')
+        ->select('blogs.*', 'users.id as authorid','users.name as authorname')
+        ->skip($id * $noofblogs)->take($noofblogs)->latest('updated_at')->get();
         $next = blog::where('active', 1)->skip(($id + 1) * $noofblogs)->take($noofblogs)->latest('updated_at')->count();
         $param = [
             'blogs' => $blogs,
@@ -279,6 +283,18 @@ class HomeController extends Controller
         return view('pages/blogs', $param);
         // return $blogs;
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
