@@ -58,7 +58,19 @@ class HomeController extends Controller
             ::where('active', 1)
             ->skip(0)->take(5)
             ->get();
-        return view('pages/blog', ['blog' => $blog, 'blogs' => $blogs]);
+
+
+            $shareComponent = \Share::page(
+                'https://blog.semikolan.co/blog/'.$slug,
+                $blog->title,
+            )
+            ->facebook()
+            ->twitter()
+            ->linkedin()
+            ->telegram()
+            ->whatsapp()        
+            ->reddit();
+        return view('pages/blog', ['blog' => $blog, 'blogs' => $blogs, 'shareComponent' => $shareComponent]);
         // return $blog;
     }
     public function blogs(int $id = 0)

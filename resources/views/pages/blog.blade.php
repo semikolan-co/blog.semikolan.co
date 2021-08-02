@@ -2,6 +2,10 @@
  $title=$blog->title.' | Semikolan Blogs';
  $keyword=$blog->tags.' ';
  $description= str_replace("&nbsp;"," ",substr(strip_tags($blog->content), 0, 300))."...";
+ $imagepath='https://blog.semikolan.co/public/uploads/ft_img/'.$blog->image;
+ $published_time = $blog->created_at;
+ $modified_time = $blog->updated_at;
+ 
  ?>
 
 @extends('layouts.app')
@@ -15,6 +19,13 @@
     margin-left: 2%;
     border-radius: 5px
 
+  }
+  #social-links ul {
+    padding-left: 0;
+  }
+  #social-links li {
+    display: inline-block;
+    margin-right: 1.4%;
   }
   .blogcontent *{
     color:#fffa !important;
@@ -86,6 +97,7 @@
   <p class="mt-2">Relavent Tags: 
   {!! join(", ",$tagstring) !!}
   </p>
+  <div class="mt-3"> {!! $shareComponent !!}</div>
     </div>
     <div class="col-md-4 my-3">
      @include('modals.recentblogs')
