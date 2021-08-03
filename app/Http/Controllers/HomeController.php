@@ -56,6 +56,8 @@ class HomeController extends Controller
         $blog = $blog[0];
         $blogs = blog
             ::where('active', 1)
+            ->join('users', 'blogs.author', '=', 'users.id')
+            ->select('blogs.*','users.id as authorid','users.name as authorname')
             ->skip(0)->take(5)
             ->get();
 

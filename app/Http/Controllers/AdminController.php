@@ -223,9 +223,6 @@ class AdminController extends Controller
                 ->from('iamtest@gmail.com', 'Test Name');
             $message->subject('Subject');
         });
-
-
-     
         return redirect('subscriber')->with('success', 'Emails Sent Successfully');
     }
 
