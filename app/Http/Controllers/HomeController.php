@@ -64,7 +64,7 @@ class HomeController extends Controller
 
             $shareComponent = \Share::page(
                 'https://blog.semikolan.co/blog/'.$slug,
-                $blog->title,
+                $blog->title.' - By '.$blog->authorname,
             )
             ->facebook()
             ->twitter()
