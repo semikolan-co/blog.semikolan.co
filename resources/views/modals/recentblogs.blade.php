@@ -19,7 +19,7 @@
                 style="color:#fffa; text-decoration:none;">
                 <div class="py-2 rbdiv" style="">
                     <h5 class="m-0">{{ $rbblog->title }}</h5>
-                    <p class="m-0" style="font-size:0.8em;"> By {{ $rbblog->author }}</p>
+                    <p class="m-0" style="font-size:0.8em;"> By {{ $rbblog->authorname }}</p>
                 </div>
             </a>
 
