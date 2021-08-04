@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,3 +60,8 @@ Route::post('/changeSubcategoryStatus/{id}', [AdminController::class, 'changeSub
 
 // Testing Routes
 Route::get('previewmail/{mailname}', [AdminController::class, 'previewmail'])->name('previewmail');
+
+
+
+//User Routes
+Route::get('/myblogs', [UserController::class, 'myblogs'])->name('myblogs');

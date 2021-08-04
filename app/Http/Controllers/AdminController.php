@@ -27,6 +27,7 @@ class AdminController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('isuseradmin');
     }
     public function index()
     {
@@ -82,58 +83,7 @@ class AdminController extends Controller
         $param = ['subscribers' => $subscribers];
         return view('pages/email',$param);
     }
-    public function addblog()
-    {
-        $param = [
-            "blog" => [
-                "id"=>'',
-                "title" => '',
-                'slug'=>'',
-                'tags'=>'',
-                'category'=>'',
-                'readtime'=>'',
-                'subcategory'=>'',
-                "active" => 1,
-                "content" => '',
-                "author" => ''
-            ],
-            "way" => 'Add',
-            "categories" => blog_category::where('active',1)->get()
-        ];
-        return view('pages/editblog', $param);
-        // return $param;
-    }
-    public function edit(int $id)
-    {
-
-        $matchThese = ['id' => $id];
-        $blog = blog::where($matchThese)->get();
-        $blog = $blog[0];
-        $param = [
-            "blog" => $blog,
-            "way" => 'Edit',
-            "categories" => blog_category::where('active',1)->get()
-        ];
-        return view('pages/editblog', $param);
-    }
-
-    public function addblogtodb(Request $req)
-    {
-        $blog = new blog;
-        $blog->title =  $req->get('title');
-        $blog->author =  Auth::id();
-        $blog->slug =  $req->get('slug');
-        $blog->tags =  $req->get('tags');
-        $blog->category =  $req->get('category');
-        $blog->readtime =  $req->get('readtime');
-        $blog->subcategory =  $req->get('subcategory');
-        $blog->active =  ($req->get('active') == 'on') ? 1 : 0;
-        $blog->content =  $req->get('content');
-        $blog->image =  "image_name.png";
-        $blog->save();
-        return redirect(route('edit', ['id' => $blog->id]));
-        // return $user->active;
-    }
+   
 
     public function addCategory(Request $req)
     {
@@ -154,49 +104,7 @@ class AdminController extends Controller
         // return $user->active;
     }
 
-    public function editblog(int $id,Request $req)
-    {
-        $fileName = ''; 
-        if(!empty($req->main_image) || $req->main_image != ''){
-            $data = explode(';', $req->main_image);
-            $part = explode("/", $data[0]);
-            $image = $req->main_image;  // your base64 encoded
-            $image = str_replace('data:image/'.$part[1].';base64,', '', $image);
-            $image = str_replace(' ', '+', $image);
-            $fileName = md5(microtime()) .'.'.$part[1];
-            $destinationPath = base_path().'/resources/uploads/';
-            Storage::disk('public')->put('/ft_img/'.$fileName, base64_decode($image));
-        }
-
-
-
-
-
-        $blog = blog::find($id);
-        $blog->title =  $req->get('title');
-        $blog->author =  Auth::id();
-        $blog->slug =  $req->get('slug');
-        $blog->tags =  $req->get('tags');
-        $blog->category =  $req->get('category');
-        $blog->readtime =  $req->get('readtime');
-        $blog->subcategory =  $req->get('subcategory');
-        $blog->active =  ($req->get('active') == 'on') ? 1 : 0;
-        $blog->content =  $req->get('content');
-        if ($fileName) {
-            $blog->image =  $fileName;
-        }
-        $blog->save();
-        return redirect(route('edit', ['id' => $blog->id]));
-        // return $user->active;
-    }
-
-
-    public function changeBlogStatus(int $id){
-        $blog = blog::find($id);
-        $blog->active =  !($blog->active);
-        $blog->save();
-        return redirect()->back();
-    }
+ 
     public function changeCategoryStatus(int $id){
         $category = blog_category::find($id);
         $category->active =  !($category->active);
