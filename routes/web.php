@@ -47,14 +47,14 @@ Route::get('thesubcategory', [AdminController::class, 'thesubcategory'])->name('
 Route::get('email', [AdminController::class, 'email'])->name('email');
 Route::get('subscriber', [AdminController::class, 'subscriber'])->name('subscriber');
 Route::get('reports', [AdminController::class, 'reports'])->name('reports');
-Route::get('/edit/{id}', [AdminController::class, 'edit'])->name('edit');
-Route::get('addblog', [AdminController::class, 'addblog'])->name('addblog');
-Route::post('/addblog', [AdminController::class, 'addblogtodb']);
+Route::get('/edit/{id}', [UserController::class, 'edit'])->name('edit');
+Route::get('addblog', [UserController::class, 'addblog'])->name('addblog');
+Route::post('/addblog', [UserController::class, 'addblogtodb']);
 Route::post('/addCategory', [AdminController::class, 'addCategory'])->name('addCategory');
 Route::post('/addSubcategory', [AdminController::class, 'addSubcategory'])->name('addSubcategory');
 Route::post('/sendmail', [AdminController::class, 'sendmail']);
-Route::post('/edit/{id}', [AdminController::class, 'editblog']);
-Route::post('/changeBlogStatus/{id}', [AdminController::class, 'changeBlogStatus'])->name('changeBlogStatus');
+Route::post('/edit/{id}', [UserController::class, 'editblog']);
+Route::post('/changeBlogStatus/{id}', [UserController::class, 'changeBlogStatus'])->name('changeBlogStatus');
 Route::post('/changeCategoryStatus/{id}', [AdminController::class, 'changeCategoryStatus'])->name('changeCategoryStatus');
 Route::post('/changeSubcategoryStatus/{id}', [AdminController::class, 'changeSubcategoryStatus'])->name('changeSubcategoryStatus');
 
