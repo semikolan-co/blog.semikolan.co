@@ -57,6 +57,10 @@
   .anchor:hover{
     color:#fff !important; 
   }
+  .blogcontent a {    
+    color: var(--green) !important;
+    text-decoration: none;
+  }
 </style>
 
  <div

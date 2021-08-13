@@ -155,11 +155,7 @@
 <style>
   
   :not(pre) > code[class*="language-"], pre[class*="language-"] {
-        background: var(--darkerShade);
-        /* color: var(--lightGreen);
-        font-family: monospace;
-        white-space: pre;
-        word-wrap: normal; */
+        background: var(--darkerShade);]
       }
 </style>
 </head>
