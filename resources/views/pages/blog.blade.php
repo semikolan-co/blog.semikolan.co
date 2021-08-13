@@ -28,7 +28,7 @@
     margin-right: 1.4%;
   }
   .blogcontent *{
-    color:#fffa !important;
+    color:#fffa ;
 
 
 
@@ -58,11 +58,19 @@
     color:#fff !important; 
   }
   .blogcontent a {    
-    color: var(--green) !important;
+    color: var(--green) ;
     text-decoration: none;
   }
 </style>
 
+<link rel="stylesheet" href="/public/vendor/prism/prism.css">
+<script src="/public/vendor/prism/prism.js"></script>
+<style>
+  
+  :not(pre) > code[class*="language-"], pre[class*="language-"] {
+        background: var(--darkerShade);]
+      }
+</style>
  <div
     class="text-center bg-image"
     style="
