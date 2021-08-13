@@ -3,8 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\DB;
+use App\Models\User;
 use App\Models\blog;
+use App\Models\subscriber;
+use App\Models\report;
+use App\Models\blog_category;
+use App\Models\blog_subcategory;
+use Auth;
+use Illuminate\Support\Str;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -132,4 +141,12 @@ class UserController extends Controller
         $blog->save();
         return redirect()->back();
     }
+
+
+    // save user to 
+
+
+
+
+
 }

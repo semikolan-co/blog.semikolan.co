@@ -138,4 +138,29 @@ class AdminController extends Controller
         return view('mail.'.$mailname);
         
     }
+
+
+
+    // Save userdata to database 
+    public function saveUserData(Request $req)
+    {
+        $user = Auth::user();
+        $user->name = $req->get('name');
+        $user->email = $req->get('email');
+        $user->password = bcrypt($req->get('password'));
+        $user->save();
+        return redirect()->back();
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
 }
