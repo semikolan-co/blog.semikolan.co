@@ -28,7 +28,7 @@
  <div
     class="text-center bg-image"
     style="
-      background-image: url('/public/img/post-bg/post-bg{{rand(0,7)}}.jpg');
+      background-image: url('/public/img/bg/post-bg{{rand(0,7)}}.jpg');
       /* min-height: 300px; */
     "
   >
