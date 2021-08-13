@@ -15,7 +15,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-S8M4SXXD2B');
+  gtag('config', 'G-S8M4SXXD2B');\
 </script>
   <title>Admin Panel</title>
 
