@@ -149,6 +149,15 @@
         background: var(--darkestShade);color:#fffa;
     }
 </style>
+
+<link rel="stylesheet" href="/public/vendor/prism/prism.css">
+<script src="/public/vendor/prism/prism.js"></script>
+<style>
+  
+  :not(pre) > code[class*="language-"], pre[class*="language-"] {
+        background: var(--darkerShade);]
+      }
+</style>
 </head>
 <body>
   <div id="app">
