@@ -21,6 +21,41 @@
         background: var(--darkestShade);
         color:#fffa;
       }
+      /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--darkestShade);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--darkerShade);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green);
+}
+
+/* scrollbar for pre tags */
+pre::-webkit-scrollbar {
+  height: 5px;
+}
+
+
+
+
+
+
+
+
+
+
   </style>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -148,7 +183,34 @@
     .form-control:active,.form-control:hover,.form-control:focus{
         background: var(--darkestShade);color:#fffa;
     }
+
+    /* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 3px;
+  margin-top: 5px;
+  background: var(--darkerShade);
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 3px;
+  background: var(--green);
+  width: 0%;
+}
+
 </style>
+<script>
+  // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
 
 </head>
 <body>
