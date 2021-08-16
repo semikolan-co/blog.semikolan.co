@@ -1,6 +1,5 @@
 
-
-<nav class="navbar navbar-expand-lg " style="background: var(--darkerShade);">
+<nav class="navbar navbar-expand-lg d-flec flex-column sticky-top pb-0" style="background: var(--darkerShade);">
   <div class="container">
     <a class="navbar-brand text-white font-weight-bold" href="{{route('index')}}"><img src="{{asset('public/img/favicon.png')}}" style="height:40px;display:inline;"/>&nbsp;&nbsp;{{env('BRAND_NAME')}}</a>
    
@@ -38,4 +37,8 @@
       </form>
     </div>
   </div>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
 </nav>
