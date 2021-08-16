@@ -1,4 +1,9 @@
 <x-guest-layout>
+  
+   <!-- Bootstrap  5.0 CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <script src="https://kit.fontawesome.com/c5fe5e7547.js" crossorigin="anonymous"></script>
 
 
 
@@ -255,6 +260,15 @@ html, body {
             </div>
         @endif
 
+        <div class="d-flex justify-content-center">
+          <a href="{{route('redirectToGithub')}}" class=" mr-0 btn btn-md m-1 btn-github  mr-2">
+            <i class="fa h4 fa-github"></i></a>
+  <a href="{{route('redirectToGoogle')}}"class=" mr-0 btn btn-md m-1 btn-google mr-2">
+  <i class="fa h4 fa-google"></i></a>
+  <a href="{{route('redirectToLinkedin')}}"class=" mr-0 btn btn-md m-1 btn-linkedin">
+    <i class="fa h4 fa-linkedin"></i></a>
+        </div>
+
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
@@ -287,6 +301,7 @@ html, body {
                 </x-jet-button>
             </div>
         </form>
+
     </x-jet-authentication-card>
 
 
