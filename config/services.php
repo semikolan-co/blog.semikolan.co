@@ -49,19 +49,19 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://localhost:8000/auth/google/callback',
+        'redirect' => env('GOOGLE_REDIRECT'),
     ],
     
     'linkedin' => [
         'client_id' => env('LINKEDIN_CLIENT_ID'),
         'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
-        'redirect' => 'http://localhost:8000/auth/linkedin/callback',
+        'redirect' => env('LINKEDIN_REDIRECT'),
     ],
 
     'github' => [
         'client_id' => env('GITHUB_CLIENT_ID'),
         'client_secret' => env('GITHUB_CLIENT_SECRET'),
-        'redirect' => 'http://localhost:8000/auth/github/callback',
+        'redirect' => env('GITHUB_REDIRECT'),
     ],
 
 
