@@ -8,8 +8,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="monetization" content="$ilp.uphold.com/H82qqmD6EFq2">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8M4SXXD2B"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8M4SXXD2B"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -97,14 +97,20 @@
             <li class="nav-item">
               <a class="nav-link" href="{{route('blogs')}}">All Blogs</a>
             </li>
+            <li>
+              <form action="/logout" method="post" >
+                @csrf 
+                <button type="submit" class="btn btn-sm btn-danger" value="Logout">Logout</button>
+              </form>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ Auth::user()->name }}
               </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              {{-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <a class=" dropdown-item" href="{{ route('addblog') }}"><i class="fa fa-plus"></i> Add Blog</a>
                 <a class=" dropdown-item" href="{{ url('/logout') }}"><i class="fa fa-sign-out-alt"></i> Logout</a>
-              </div>
+              </div> --}}
             </li>
           </ul>
         </div>
