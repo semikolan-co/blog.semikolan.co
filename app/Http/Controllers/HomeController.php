@@ -89,7 +89,7 @@ class HomeController extends Controller
         ->join('users', 'blogs.author', '=', 'users.id')
         ->select('blogs.*', 'users.id as authorid','users.name as authorname')
         ->skip($id * $noofblogs)->take($noofblogs)->latest('updated_at')->get();
-        $next = blog::where('active', 1)->skip(($id + 1) * $noofblogs)->take($noofblogs)->latest('updated_at')->count();
+        $next = blog::where('active', 1)->skip(($id + 1) * $noofblogs)->take($noofblogs)->latest('updated_at')->get()->count();
         $param = [
             'blogs' => $blogs,
             'prev' => $prev,
@@ -98,6 +98,7 @@ class HomeController extends Controller
             'title1' => 'All Blogs',
             'title2' => '',
         ];
+        // return $param;
         return view('pages/blogs', $param);
         // return $blogs;
     }
