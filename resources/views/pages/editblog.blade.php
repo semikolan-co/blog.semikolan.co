@@ -32,6 +32,7 @@
                             <label>Slug</label>
                             <input name="slug" value="{{ $blog['slug'] }}" type="text" class="form-control"
                                 placeholder="Slug" id="phone" required
+                                onkeyup="this.value=this.value.replace(' ','-')"
                                 data-validation-required-message="Please enter your phone number.">
                             <p class="help-block text-danger"></p>
                         </div>
