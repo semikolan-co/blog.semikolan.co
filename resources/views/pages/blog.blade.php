@@ -64,6 +64,10 @@
     color: var(--green) ;
     text-decoration: none;
   }
+  .blogcontent img{
+    max-width: 100%;
+
+  }
 </style>
 
 <link rel="stylesheet" href="/public/vendor/prism/prism.css">
