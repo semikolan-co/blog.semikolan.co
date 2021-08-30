@@ -1,142 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TNP Workshop</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="/assets/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="/assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/assets/vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
 
-<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="monetization" content="$ilp.uphold.com/H82qqmD6EFq2">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8M4SXXD2B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-S8M4SXXD2B');\
-</script>
-  <title>Admin Panel</title>
-
-
-  
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('public/js/app.js') }}" defer></script>
-
-    <!-- Fonts --><!-- Font Awesome -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-  rel="stylesheet"
-/>
-<!-- Google Fonts -->
-<link
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-  rel="stylesheet"
-/>
-<!-- MDB -->
-{{-- <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
-  rel="stylesheet"
-/> --}}
-
- <!-- Bootstrap CSS -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/css/sidebar.css') }}" rel="stylesheet">
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
     
-                    <!-- Include stylesheet -->
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    
+        <!--Font Awesome-->
+        <script src="https://kit.fontawesome.com/c5fe5e7547.js" crossorigin="anonymous"></script>
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.min.js"></script>
+    <link rel="shortcut icon" href="/assets/images/favicon.png" />
 
-</head>
+    <style>
+      .form-group *{
+          color: #fffd !important;
+      }
+    </style>
 
-<body>
+    @yield('styles')
+  </head>
+  <body>
+    @include('flash')
+    <div class="container-scroller">
+      @if (Auth::user()->role_id == 1)
+            @include('partials._sidebar')
+      @elseif (Auth::user()->role_id == 0)
+            @include('partials._teachersidebar')
 
-  <div class="d-flex" id="wrapper">
+      @endif
+        <!-- partial -->
+        <div class="main-panel">
 
-    <!-- Sidebar -->
-    <div class="bg-light border-right bg-dark text-white pt-2" id="sidebar-wrapper">
-      <a class="sidebar-heading text-white font-weight-bold" href="{{ route('index')}}">{{env('BRAND_NAME')}} </a>
-      <div class="list-group list-group-flush">
-        <a href="{{ route('dash')}}" class="list-group-item list-group-item-action text-white bg-dark">Dashboard</a>
-        <a href="{{ route('ablogs')}}" class="list-group-item list-group-item-action text-white bg-dark">All Blogs</a>
-        <a href="{{ route('email')}}" class="list-group-item list-group-item-action text-white bg-dark">Mailbox</a>
-        <a href="{{ route('subscriber')}}" class="list-group-item list-group-item-action text-white bg-dark">Subscribers</a>
-        <a href="{{ route('reports')}}" class="list-group-item list-group-item-action text-white bg-dark">Reports</a>
-        {{-- <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a> --}}
-      </div>
-    </div>
-    <!-- /#sidebar-wrapper -->
+            <div class="content-wrapper">
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-dark" id="menu-toggle"><i class="fa fa-bars"></i></button>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="{{route('index')}}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('blogs')}}">All Blogs</a>
-            </li>
-            <li>
-              <form action="/logout" method="post" >
-                @csrf 
-                <button type="submit" class="btn btn-sm btn-danger" value="Logout">Logout</button>
-              </form>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{ Auth::user()->name }}
-              </a>
-              {{-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class=" dropdown-item" href="{{ route('addblog') }}"><i class="fa fa-plus"></i> Add Blog</a>
-                <a class=" dropdown-item" href="{{ url('/logout') }}"><i class="fa fa-sign-out-alt"></i> Logout</a>
-              </div> --}}
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      @yield('content')
-    </div>
-    <!-- /#page-content-wrapper -->
-
+          @yield ('content')
+          
   </div>
-  
-  <!-- /#wrapper -->
- <!-- Option 1: Bootstrap Bundle with Popper -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"> </script>
+  <!-- content-wrapper ends -->
+  <!-- partial:partials/_footer.html -->
+  <footer class="footer">
+    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+      <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © TNP-RGPV 2020</span>
+      <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Developed by  <a href="https://ecellrgpv.com" target="_blank">Ecell RGPV</a> </span>
+    </div>
+  </footer>
+  <!-- partial -->
+ 
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="/assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="/assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="/assets/js/off-canvas.js"></script>
+    <script src="/assets/js/hoverable-collapse.js"></script>
+    <script src="/assets/js/misc.js"></script>
+    <script src="/assets/js/settings.js"></script>
+    <script src="/assets/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="/assets/js/dashboard.js"></script>
+    <!-- End custom js for this page -->
 
-  <!-- Menu Toggle Script -->
-  <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-</body>
-
+    @yield('scripts')
+  </body>
 </html>
