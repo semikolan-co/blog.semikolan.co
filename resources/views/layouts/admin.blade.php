@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TNP Workshop</title>
+    <title>Admin Panel | SemiKolan Blogs</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="/assets/vendors/css/vendor.bundle.base.css">
@@ -62,8 +62,8 @@
   <!-- partial:partials/_footer.html -->
   <footer class="footer">
     <div class="d-sm-flex justify-content-center justify-content-sm-between">
-      <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © TNP-RGPV 2020</span>
-      <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Developed by  <a href="https://ecellrgpv.com" target="_blank">Ecell RGPV</a> </span>
+      <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © SemiKolan Blogs</span>
+      <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Developed by  <a href="https://semikolan.co" target="_blank">SemiKolan</a> </span>
     </div>
   </footer>
   <!-- partial -->
