@@ -20220,7 +20220,7 @@ div.tagsinput {
 /* === Landing screens === */
 /* Auth */
 .auth.login-bg {
-  background: url("https://cdn.pixabay.com/photo/2018/05/14/16/54/cyber-3400789_1280.jpg");
+  background: url("/assets/images/auth/authbg.png");
   background-size: cover; 
   background-position: center;
 }
