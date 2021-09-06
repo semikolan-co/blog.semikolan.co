@@ -19,6 +19,12 @@ class APIController extends Controller
         return blog_subcategory::where('parent_category',$req->catId)->get();
     }
     function subscribeuser(Request $req){
+        // Check if user already subscribed
+        $subscriber = subscriber::where('email',$req->email)->first();
+        if($subscriber){
+            return response()->json(['status'=>'error','message'=>'You are already subscribed']);
+        }
+        
         $subscriber = new subscriber;
         $subscriber->email = $req->email;
         try {
