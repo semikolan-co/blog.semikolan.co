@@ -18,4 +18,18 @@ class APIController extends Controller
     function getCategory(Request $req){
         return blog_subcategory::where('parent_category',$req->catId)->get();
     }
+    function subscribeuser(Request $req){
+        $subscriber = new subscriber;
+        $subscriber->email = $req->email;
+        try {
+            $subscriber->save();
+            return response()->json(['status'=>'success','message'=>'Subscribed Successfully']);
+        }
+        catch (\Exception $e) {
+            $message = $e->getMessage();
+            return response()->json(['status'=>'error','message'=>'Something went wrong']);
+        }
+
+        
+    }
 }
