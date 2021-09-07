@@ -1,2 +1,2 @@
 # Semikolan Blogs
-Checkout Semikolan Blogs at  [blog.semikolan.co](blog.semikolan.co)
+This Repository contains the source code of Semikolan Blogs at  [blog.semikolan.co](blog.semikolan.co)
