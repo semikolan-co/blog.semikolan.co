@@ -10,6 +10,8 @@ use App\Models\subscriber;
 use App\Models\report;
 use App\Models\blog_category;
 use App\Models\blog_subcategory;
+use App\Models\Message;
+use App\Models\Giveaway;
 use Auth;
 
 use Mail;
@@ -37,5 +39,20 @@ class APIController extends Controller
         }
 
         
+    }
+
+    function contact(Request $req){
+        $message = new Message;
+        $message->name = $req->name;
+        $message->email = $req->email;
+        $message->message = $req->message;
+        try {
+            $message->save();
+            return response()->json(['status'=>'success','message'=>'Message sent successfully']);  
+        }
+        catch (\Exception $e) {
+            $message = $e->getMessage();
+            return response()->json(['status'=>'error','message'=>'Something went wrong']);
+        }
     }
 }
