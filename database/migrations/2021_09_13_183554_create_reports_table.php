@@ -15,6 +15,10 @@ class CreateReportsTable extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->string('report');
+            $table->boolean('action_taken')->nullable();
             $table->timestamps();
         });
     }
