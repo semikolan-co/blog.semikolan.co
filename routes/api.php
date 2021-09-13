@@ -22,3 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/getCategory', [APIController::class, 'getCategory'])->name('getCategory');
 Route::post('/subscribeuser',[APIController::class, 'subscribeuser'] );
 Route::post('/contact',[APIController::class, 'contact'] );
+Route::post('giveaway',[APIController::class, 'giveaway'] );
