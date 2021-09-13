@@ -21,7 +21,6 @@ class CreateBlogSubcategoriesTable extends Migration
         // created_at	datetime	
         // updated_at	datetime
         Schema::create('blog_subcategories', function (Blueprint $table) {
-            $table->id();
             $table->primary('id');
             $table->string('sname', 50)->nullable();
             $table->integer('parent_category')->unsigned();
