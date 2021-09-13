@@ -15,6 +15,8 @@ class CreateBlogCategoriesTable extends Migration
     {
         Schema::create('blog_categories', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->boolean('active');
             $table->timestamps();
         });
     }
