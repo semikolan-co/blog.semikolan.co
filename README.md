@@ -58,30 +58,27 @@ Run the database seeder and you're done
     php artisan migrate:refresh
     
 
-<!-- ## Codebase Structure
+## Codebase Structure
 
-- `app` - Contains all the Eloquent models
-- `app/Http/Controllers/Api` - Contains all the api controllers
-- `app/Http/Middleware` - Contains the JWT auth middleware
-- `app/Http/Requests/Api` - Contains all the api form requests
-- `app/RealWorld/Favorite` - Contains the files implementing the favorite feature
-- `app/RealWorld/Filters` - Contains the query filters used for filtering api requests
-- `app/RealWorld/Follow` - Contains the files implementing the follow feature
-- `app/RealWorld/Paginate` - Contains the pagination class used to paginate the result
-- `app/RealWorld/Slug` - Contains the files implementing slugs to articles
-- `app/RealWorld/Transformers` - Contains all the data transformers
+- `app/Http/Models` - Contains all the Eloquent models
+- `app/Http/Controllers` - Contains all Controllers
+- `app/Http/Middleware` - Contains the  middleware
 - `config` - Contains all the application configuration files
-- `database/factories` - Contains the model factory for all the models
 - `database/migrations` - Contains all the database migrations
 - `database/seeds` - Contains the database seeder
-- `routes` - Contains all the api routes defined in api.php file
-- `tests` - Contains all the application tests
-- `tests/Feature/Api` - Contains all the api tests
+- `routes` - Contains all the routes defined in web.php file
+- `tests` - Contains all the application tests (Currently not in use)
+- `vendor` - Contains all the third party libraries
+- `public` - Contains all the public assets
+- `resources/views` - Contains all the views
+- `resources/views/layouts` - Contains the layouts
+
+
 
 ## Environment variables
 
 - `.env` - Environment variables can be set in this file
 
-***Note*** : You can quickly set the database information and other variables in this file and have the application fully working. -->
+***Note*** : You can quickly set the database information and other variables in this file and have the application fully working.
 
 ----------
