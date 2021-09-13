@@ -55,4 +55,28 @@ class APIController extends Controller
             return response()->json(['status'=>'error','message'=>'Something went wrong']);
         }
     }
+    function giveaway(Request $req){
+
+        // Upload File and Save it to the server
+        $file = $req->file('marksheet');
+        $fileName = time().'.'.$file->getClientOriginalExtension();
+        $file->move(public_path('uploads'), $fileName);
+        
+        $giveaway = new Giveaway;
+        $giveaway->name = $req->name;
+        $giveaway->email = $req->email;
+        $giveaway->phone = $req->phone;
+        $giveaway->marksheet = $fileName;
+        $giveaway->discord = $giveaway->discord;
+        $giveaway->instagram = $giveaway->instagram;
+        try {
+            $giveaway->save();
+            return response()->json(['status'=>'success','message'=>'Message sent successfully']);
+        }
+        catch (\Exception $e) {
+            $message = $e->getMessage();
+            return response()->json(['status'=>'error','message'=>'Something went wrong']);
+        }
+
+    }
 }
