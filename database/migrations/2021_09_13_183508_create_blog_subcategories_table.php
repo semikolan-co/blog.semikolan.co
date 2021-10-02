@@ -14,11 +14,13 @@ class CreateBlogSubcategoriesTable extends Migration
     public function up()
     {
         Schema::create('blog_subcategories', function (Blueprint $table) {
-            $table->primary('id');
+            $table->id();
             $table->string('sname', 50)->nullable();
             $table->integer('parent_category')->unsigned();
             $table->boolean('active')->default(1);
             $table->timestamps();
+
+            $table->primary('id');
         });
     }
 
