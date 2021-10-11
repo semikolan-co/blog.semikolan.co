@@ -87,4 +87,4 @@ Run the database seeder and you're done
 
 ***Note*** : You can quickly set the database information and other variables in this file and have the application fully working.
 
-----------
+----------------------
