@@ -1,139 +1,9 @@
-<!doctype html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset='UTF-8'>
-    <meta name='keywords' content=',blog,semikolan,technical,programming,blogs'>
-    <meta name='description'
-        content='A hackathon is a design sprint-like event; often, in which computer programmers and others involved in software development, including graphic designers, interface designers, project managers, domain experts, and others collaborate intensively on software projects. There are various websites wh...'>
-    <meta name='subject' content='SemiKolan Blogs'>
-    <meta name='copyright' content='SemiKolan'>
-    <meta name='language' content='ES'>
-    <meta name='summary'
-        content='Semikolan Blogs is a platform where you can write technical blogs, read useful technical content related to various fields including Website Development, Mobile Appplication Development, Machine Learning, Blockchain and almost everything technological you can think of.'>
-    <meta name='Classification' content='Education/Programming'>
-    <meta name='author' content='SemiKolan, contact@semikolan.co'>
-    <meta name='designer' content='SemiKolan'>
-    <meta name='reply-to' content='contact@semikolan.co'>
-    <meta name='owner' content='SemiKolan'>
-    <meta name='category' content='Education'>
-    <meta name='subtitle' content='A Platform to create and find all your Technical solutions.'>
-    <meta name="monetization" content="$ilp.uphold.com/H82qqmD6EFq2">
-    <meta name="csrf-token" content="CKjgoWvcf0j3e2LRjiDxQPCSMMCoXirUNBbTL9sq">
-    <link rel="shortcut icon" href="/public/img/favicon.png" type="image/x-icon">
-
-
-
-
-
-    <!-- google fonts for heading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-
-
-    <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="Websites where you can find Hackathons | Semikolan Blogs">
-    <meta itemprop="description"
-        content="A hackathon is a design sprint-like event; often, in which computer programmers and others involved in software development, including graphic designers, interface designers, project managers, domain experts, and others collaborate intensively on software projects. There are various websites wh...">
-    <meta itemprop="image" content="https://blog.semikolan.co/public/uploads/ft_img/image_name.png">
-
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@semikolanco">
-    <meta name="twitter:title" content="Websites where you can find Hackathons | Semikolan Blogs">
-    <meta name="twitter:description"
-        content="A hackathon is a design sprint-like event; often, in which computer programmers and others involved in software development, including graphic designers, interface designers, project managers, domain experts, and others collaborate intensively on software projects. There are various websites wh...">
-    <meta name="twitter:creator" content="@semikolanco">
-    <!-- Twitter summary card with large image must be at least 280x150px -->
-    <meta name="twitter:image:src" content="https://blog.semikolan.co/public/uploads/ft_img/image_name.png">
-
-    <!-- Open Graph data -->
-    <meta property="og:title" content="Websites where you can find Hackathons | Semikolan Blogs" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://blog.semikolan.co/" />
-    <meta property="og:image" content="https://blog.semikolan.co/public/uploads/ft_img/image_name.png" />
-    <meta property="og:description"
-        content="A hackathon is a design sprint-like event; often, in which computer programmers and others involved in software development, including graphic designers, interface designers, project managers, domain experts, and others collaborate intensively on software projects. There are various websites wh..." />
-    <meta property="og:site_name" content="SemiKolan Blogs | Never stop Learning" />
-    <meta property="article:published_time" content="2021-09-14 15:43:06" />
-    <meta property="article:modified_time" content="" />
-    <meta property="article:section" content="Technology" />
-    <meta property="article:tag" content="Education" />
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8M4SXXD2B"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-S8M4SXXD2B');
-    </script> <!-- Fonts -->
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <title>Websites where you can find Hackathons | Semikolan Blogs</title>
-    <script src="https://blog.semikolan.co/public/js/app.js" defer></script>
-    <link href="https://blog.semikolan.co/public/css/app.css" rel="stylesheet">
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"> </script>
-</head>
-
-<body>
-    <div id="app">
-        <div style="position: fixed;right:20px;bottom:20px;">
-
-
-
-
-
-
-
-        </div>
-        <nav class="navbar navbar-expand-lg d-flec flex-column sticky-top pb-0" style="background: var(--darkerShade);">
-            <div class="container">
-                <a class="navbar-brand text-white font-weight-bold" href="https://blog.semikolan.co"><img
-                        src="https://blog.semikolan.co/public/img/favicon.png"
-                        style="height:40px;display:inline;" />&nbsp;&nbsp;Blogs</a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
-                        <i class="fas fa-bars text-muted"></i>
-                    </span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                    </ul>
-                    <form class="d-flex" action="https://blog.semikolan.co/search">
-                        <input class="form-control me-2" name="q" type="search" placeholder="Search"
-                            aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" id="myBar"></div>
-            </div>
-
-        </nav>
-
-
-
-        <!-- 404 container start-->
+@section('content')
+   
+     <!-- 404 container start-->
+         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
         <style>
             .main_container_404 {
                 /* background: url('./Sprinkle.svg'); */
@@ -193,7 +63,6 @@
             }
         </style>
         <div class="main_container_404">
-
             <h1>404 Page Not Found</h1>
             <svg id="e3553d74-0590-491b-b28e-952d4d1eac83" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                 width="672.5315" height="738.39398" viewBox="0 0 672.5315 738.39398">
@@ -279,75 +148,8 @@
                     d="M626.73425,530.197a2.0001,2.0001,0,0,1-2-2v-118a2,2,0,1,1,4,0v118A2.0001,2.0001,0,0,1,626.73425,530.197Z"
                     transform="translate(-263.73425 -80.80301)" fill="#ccc"></path>
             </svg>
-
-
-            <!-- <a href="https://blog.semikolan.co/"  class="home_btn">Go To Blog's Home</a> -->
-
             <a class="btn-go-home" target="_blank" href="/">GO BACK HOME</a>
         </div>
-
-
-
-
-
         <!-- 404 end here -->
-
-
-
-        <footer class="page-footer font-small text-white pt-4" style="background: var(--darkerShade);">
-
-            <div class="container">
-
-                <div class="row pb-4">
-
-
-                    <div class="col-md-6">
-
-
-                        <span class="display-6"><img src="https://blog.semikolan.co/public/images/favicon.png"
-                                style="height:40px;display:inline;" />&nbsp;&nbsp;Blogs</span>
-
-
-
-                    </div>
-
-
-                    <div class="col-md-6">
-
-                        <form class="input-group align-middle" action="/subscribe" method="POST">
-                            <input type="hidden" name="_token" value="CKjgoWvcf0j3e2LRjiDxQPCSMMCoXirUNBbTL9sq"> <input
-                                type="hidden" name="route" value="blog/websites-where-you-find-hackathons">
-
-
-                            <input type="email" required name="email" class="form-control"
-                                placeholder="Enter Your Email">
-                            <div class="input-group-append">
-                                <button type="submit" style="background:var(--blue);color:white;"
-                                    class="input-group-text" id="basic-addon2">Subscribe Newsleter</button>
-                            </div>
-                        </form>
-
-                    </div>
-
-
-
-                </div>
-
-
-
-            </div>
-
-
-            <div class="footer-copyright text-center py-3" style="background: var(--darkestShade);color:#fffa;">© 2021
-                Copyright:
-                <a style="color:var(--green); text-decoration:none;" href="https://semikolan.co/"> semikolan.co</a>
-            </div>
-
-
-
-        </footer>
-
-    </div>
-</body>
-
-</html>
+        
+@endsection
