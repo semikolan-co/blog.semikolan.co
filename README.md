@@ -17,6 +17,12 @@
 
 # Semikolan Blogs
 This Repository contains the source code of Semikolan Blogs at  [blog.semikolan.co](blog.semikolan.co)
+Some links for Semikolan blog:
+Website: [Semikolan Blog](https://blog.semikolan.co)
+Login Page: [Login](https://blog.semikolan.co/login)
+Register Page: [Register](https://blog.semikolan.co/register)
+
+You can also join the [Semikolan Discord Server](https://discord.semikolan.co) to have a discussion about the project or ask out about any other queries.
 
 # Getting started
 

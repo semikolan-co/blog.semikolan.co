@@ -22,8 +22,9 @@
 
     <!-- Layout styles -->
     <link rel="stylesheet" href="/assets/css/style.css">
-    
-    
+    <link rel="stylesheet" href="/assets/css/custom-styles.css">
+
+
         <!--Font Awesome-->
         <script src="https://kit.fontawesome.com/c5fe5e7547.js" crossorigin="anonymous"></script>
     <!-- End layout styles -->
@@ -32,12 +33,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.css">
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.min.js"></script>
     <link rel="shortcut icon" href="/assets/images/favicon.png" />
-
-    <style>
-      .form-group *{
-          color: #fffd !important;
-      }
-    </style>
 
     @yield('styles')
   </head>
@@ -56,7 +51,7 @@
             <div class="content-wrapper">
 
           @yield ('content')
-          
+
   </div>
   <!-- content-wrapper ends -->
   <!-- partial:partials/_footer.html -->
@@ -67,7 +62,7 @@
     </div>
   </footer>
   <!-- partial -->
- 
+
 
         </div>
         <!-- main-panel ends -->

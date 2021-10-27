@@ -162,6 +162,8 @@ class HomeController extends Controller
 
         function make($id,$noofblogs,$q) {
         return blog::where('active', 1)
+        ->join('users', 'blogs.author', '=', 'users.id')
+        ->select('blogs.*', 'users.id as authorid','users.name as authorname')
         ->where(function ($query) use($q) {
             $query->where('title', 'like', '%' . $q . '%')
             ->orWhere('title', 'like', '%' . $q . '%')
