@@ -1,5 +1,20 @@
 ![Cover Image](.github/images/cover.png)
 
+
+<div align="center">
+
+![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-orange?style=flat-square&labelColor=0a192f&color=e6f1ff)
+![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red?style=flat-square&labelColor=0a192f&color=e6f1ff)
+![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen?style=flat-square&labelColor=0a192f&color=e6f1ff)
+[![GitHub issues](https://img.shields.io/github/issues/semikolan-co/blog.semikolan.co?style=social&labelColor=0a192f&color=a8b2d1)](https://github.com/semikolan-co/blog.semikolan.co/issues)
+[![GitHub forks](https://img.shields.io/github/forks/semikolan-co/blog.semikolan.co?style=social&labelColor=0a192f&color=a8b2d1)](https://github.com/semikolan-co/blog.semikolan.co/network)
+[![GitHub stars](https://img.shields.io/github/stars/semikolan-co/blog.semikolan.co?style=social&labelColor=0a192f&color=a8b2d1)](https://github.com/semikolan-co/blog.semikolan.co/stargazers)
+  
+![Hactoberfest](https://img.shields.io/badge/Hactoberfest-%E2%9D%A4-red?style=for-the-badge&labelColor=0a192f&color=64ffda)
+![DWoC](https://img.shields.io/badge/DWoC-%E2%9D%A4-red?style=for-the-badge&labelColor=0a192f&color=64ffda)
+</div>
+
+
 # Semikolan Blogs
 This Repository contains the source code of Semikolan Blogs at  [blog.semikolan.co](blog.semikolan.co)
 Some links for Semikolan blog:
@@ -9,7 +24,12 @@ Register Page: [Register](https://blog.semikolan.co/register)
 
 You can also join the [Semikolan Discord Server](https://discord.semikolan.co) to have a discussion about the project or ask out about any other queries.
 
-# Getting started
+### Table of Contents
+- [Installation](#installation)
+- [Codebase Structure](#codebase-structure)
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Join Us](#join-us)
+- [Contributers](#code-contributers)
 
 ## Installation
 
@@ -49,7 +69,7 @@ Start the local development server
 You can now access the server at http://localhost:8000
 
 
-## Database seeding
+### Database seeding
 
 **Populate the database with seed data with relationships which includes users, blogs, categories, subcategories, reports and subscribers. This can help you to quickly start testing  and start using it with ready content.**
 
@@ -66,7 +86,7 @@ Run the database seeder and you're done
     php artisan migrate:refresh
     
 
-## Codebase Structure
+### Codebase Structure
 
 - `app/Http/Models` - Contains all the Eloquent models
 - `app/Http/Controllers` - Contains all Controllers
@@ -83,10 +103,27 @@ Run the database seeder and you're done
 
 
 
-## Environment variables
+### Environment variables
 
 - `.env` - Environment variables can be set in this file
 
-***Note*** : You can quickly set the database information and other variables in this file and have the application fully working.
+> ***Note*** : You can quickly set the database information and other variables in this file and have the application fully working.
 
-----------
+
+
+## Join Us
+
+Be a part of the SemiKolan Developer's Community by joining our [Discord Server](https://discord.semikolan.co). Here you can discuss about the project or ask any other queries and there will be a lot of folks to help
+
+[![](https://img.shields.io/discord/849036512045039637?color=5865F2&logo=Discord&style=flat-square)](https://discord.semikolan.co)
+
+
+
+
+## Code Contributers
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+
+<a href="https://github.com/semikolan-co/blog.semikolan.co/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=semikolan-co/blog.semikolan.co" />
+</a>
