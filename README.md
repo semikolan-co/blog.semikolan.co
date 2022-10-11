@@ -205,45 +205,26 @@ blog.semikolon.co
 │   │
 │   ├── fonts\
 │   │   ├── Assistant\
-│   │   │   ├── ..Font files
+│   │   │   └── ..Font files
 │   │   │
 │   │   └── Rubik\
-│   │       ├── Rubik-Black.ttf
-│   │       ├── Rubik-Bold.ttf
-│   │       ├── Rubik-Light.ttf
-│   │       ├── Rubik-Medium.ttf
-│   │       └── Rubik-Regular.ttf
 │   │
 │   ├── images\
 │   │   ├── auth\
-│   │   │
 │   │   ├── carousel\
-│   │   │
 │   │   ├── dashboard\
-│   │   │
 │   │   ├── faces\
-│   │   │
 │   │   ├── faces-clipart\
-│   │   │
 │   │   ├── file-icons\
 │   │   │   ├── 128\
-│   │   │   │
 │   │   │   ├── 256\
-│   │   │   │
 │   │   │   ├── 512\
-│   │   │   │
 │   │   │   └── 64\
-│   │   │
-│   │   │
 │   │   ├── lightbox\
-│   │   │
 │   │   ├── samples\
 │   │   │   ├── 1280x768\
-│   │   │   │
-│   │   │   ├── 300x300\
-│   │   │
+│   │   │   └── 300x300\
 │   │   ├── screenshots\
-│   │   │
 │   │   └── sprites\
 │   │
 │   ├── js\
@@ -491,7 +472,6 @@ blog.semikolon.co
 │
 ├── bootstrap\
 │   ├── cache\
-│   │   └── .gitignore
 │   └── app.php
 │
 ├── config\
@@ -550,10 +530,7 @@ blog.semikolon.co
 │   │   └── templatemo-space-dynamic.css
 │   │
 │   ├── images\
-│   │
 │   ├── img\
-│   │   ├── bg\
-│   │   └── favicon.png
 │   │
 │   ├── js\
 │   │   ├── animation.js
