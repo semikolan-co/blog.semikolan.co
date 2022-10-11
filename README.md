@@ -205,30 +205,7 @@ blog.semikolon.co
 │   │
 │   ├── fonts\
 │   │   ├── Assistant\
-│   │   │   ├── Assistant-Bold.eot
-│   │   │   ├── Assistant-Bold.ttf
-│   │   │   ├── Assistant-Bold.woff
-│   │   │   ├── Assistant-Bold.woff2
-│   │   │   ├── Assistant-ExtraBold.eot
-│   │   │   ├── Assistant-ExtraBold.ttf
-│   │   │   ├── Assistant-ExtraBold.woff
-│   │   │   ├── Assistant-ExtraBold.woff2
-│   │   │   ├── Assistant-ExtraLight.eot
-│   │   │   ├── Assistant-ExtraLight.ttf
-│   │   │   ├── Assistant-ExtraLight.woff
-│   │   │   ├── Assistant-ExtraLight.woff2
-│   │   │   ├── Assistant-Light.eot
-│   │   │   ├── Assistant-Light.ttf
-│   │   │   ├── Assistant-Light.woff
-│   │   │   ├── Assistant-Light.woff2
-│   │   │   ├── Assistant-Regular.eot
-│   │   │   ├── Assistant-Regular.ttf
-│   │   │   ├── Assistant-Regular.woff
-│   │   │   ├── Assistant-Regular.woff2
-│   │   │   ├── Assistant-SemiBold.eot
-│   │   │   ├── Assistant-SemiBold.ttf
-│   │   │   ├── Assistant-SemiBold.woff
-│   │   │   └── Assistant-SemiBold.woff2
+│   │   │   ├── ..Font files
 │   │   │
 │   │   └── Rubik\
 │   │       ├── Rubik-Black.ttf
@@ -239,111 +216,35 @@ blog.semikolon.co
 │   │
 │   ├── images\
 │   │   ├── auth\
-│   │   │   ├── Login_bg.jpg
-│   │   │   ├── Login_bg2.jpg
-│   │   │   ├── authbg.png
-│   │   │   ├── lockscreen-bg.jpg
-│   │   │   ├── login-bg.jpg
-│   │   │   └── register-bg.jpg
 │   │   │
 │   │   ├── carousel\
-│   │   │   ├── ..banner JPGs
 │   │   │
 │   │   ├── dashboard\
-│   │   │   ├── Group126@2x.png
-│   │   │   ├── Img_5.jpg
-│   │   │   ├── Rectangle.jpg
-│   │   │   ├── circle.png
-│   │   │   ├── circle.svg
-│   │   │   ├── img_1.jpg
-│   │   │   ├── img_2.jpg
-│   │   │   ├── img_3.jpg
-│   │   │   ├── img_4.jpg
-│   │   │   └── img_6.jpg
 │   │   │
 │   │   ├── faces\
-│   │   │   ├── ..face JPGs
 │   │   │
 │   │   ├── faces-clipart\
-│   │   │   ├── ..cliparts pics
 │   │   │
 │   │   ├── file-icons\
 │   │   │   ├── 128\
-│   │   │   │   ├── File Icon PNGs
 │   │   │   │
 │   │   │   ├── 256\
-│   │   │   │   ├── ...File Icon PNGs
 │   │   │   │
 │   │   │   ├── 512\
-│   │   │   │   ├── ...File Icon PNGs
 │   │   │   │
 │   │   │   └── 64\
-│   │   │       ├── ...File Icon PNGs
 │   │   │
 │   │   │
 │   │   ├── lightbox\
-│   │   │   ├── play-button.png
-│   │   │   ├── thumb-v-v-1.jpg
-│   │   │   ├── thumb-v-v-2.jpg
-│   │   │   ├── thumb-v-y-1.jpg
-│   │   │   └── thumb-v-y-2.jpg
 │   │   │
 │   │   ├── samples\
 │   │   │   ├── 1280x768\
-│   │   │   │   ├── ...so many images
 │   │   │   │
 │   │   │   ├── 300x300\
-│   │   │   │   ├── ...so many images
-│   │   │   │
-│   │   │   ├── Banner_bg.jpg
-│   │   │   ├── Login_bg.jpg
-│   │   │   ├── Login_bg2.jpg
-│   │   │   ├── Mac.png
-│   │   │   ├── angular-4.png
-│   │   │   ├── bootstrap-stack.png
-│   │   │   ├── charts.png
-│   │   │   ├── dashboard.png
-│   │   │   ├── e-commerce.png
-│   │   │   ├── editors.png
-│   │   │   ├── email.png
-│   │   │   ├── forms.png
-│   │   │   ├── html5.png
-│   │   │   ├── lockscreen-bg.jpg
-│   │   │   ├── modal.png
-│   │   │   ├── popup.png
-│   │   │   └── widgets.png
 │   │   │
 │   │   ├── screenshots\
-│   │   │   ├── classic-horizontal.jpg
-│   │   │   ├── classic-vertical.jpg
-│   │   │   ├── modern-horizontal.jpg
-│   │   │   ├── modern-vertical.jpg
-│   │   │   └── tinted-sidebar.jpg
 │   │   │
-│   │   ├── sprites\
-│   │   │   ├── blue.png
-│   │   │   ├── dark.png
-│   │   │   ├── flag.png
-│   │   │   ├── green.png
-│   │   │   ├── jsgrid-icons.png
-│   │   │   ├── logo-mini.svg
-│   │   │   ├── red.png
-│   │   │   └── yellow.png
-│   │   │
-│   │   ├── benefits-01.png
-│   │   ├── benefits-02.png
-│   │   ├── favicon.png
-│   │   ├── home-04.png
-│   │   ├── homelanding-02.png
-│   │   ├── homelanding-03.png
-│   │   ├── homelanding-04.png
-│   │   ├── homeresponsive-05.png
-│   │   ├── logo-mini.svg
-│   │   ├── logo.svg
-│   │   ├── overall_look-05.png
-│   │   ├── why-company.png
-│   │   ├── why-guidance.svg
-│   │   └── why-learn.png
+│   │   └── sprites\
 │   │
 │   ├── js\
 │   │   ├── ace.js
@@ -538,17 +439,11 @@ blog.semikolon.co
 │       │   └── vendor.bundle.base.css
 │       │
 │       ├── flag-icon-css\
-│       │   │
 │       │   ├── css\
 │       │   │   └── flag-icon.min.css
-│       │   │
 │       │   └── flags\
-│       │       │
 │       │       ├── 1x1\
-│       │       │   ├── ...so many svgs
-│       │       │
 │       │       └── 4x3\
-│       │           ├── ...so many svgs
 │       │
 │       ├── js\
 │       │   ├── bootstrap.min.js.map
@@ -570,7 +465,6 @@ blog.semikolon.co
 │       │       ├── materialdesignicons-webfont.ttf
 │       │       ├── materialdesignicons-webfont.woff
 │       │       └── materialdesignicons-webfont.woff2
-│       │
 │       │
 │       ├── owl-carousel-2\
 │       │   ├── owl.carousel.min.css
@@ -598,7 +492,6 @@ blog.semikolon.co
 ├── bootstrap\
 │   ├── cache\
 │   │   └── .gitignore
-│   │
 │   └── app.php
 │
 ├── config\
@@ -645,7 +538,6 @@ blog.semikolon.co
 │   ├── seeders\
 │   │   ├── DatabaseSeeder.php
 │   │   └── UserSeeder.php
-│   │
 │   └── .gitignore
 │
 ├── public\
@@ -658,28 +550,9 @@ blog.semikolon.co
 │   │   └── templatemo-space-dynamic.css
 │   │
 │   ├── images\
-│   │   ├── about-bg.png
-│   │   ├── about-left-image.png
-│   │   ├── baner-dec-left.png
-│   │   ├── baner-dec-right.png
-│   │   ├── banner-right-image.png
-│   │   ├── big-blog-thumb.jpg
-│   │   ├── blog-dec.png
-│   │   ├── blog-thumb-01.jpg
-│   │   ├── contact-bg.png
-│   │   ├── contact-decoration.png
-│   │   ├── favicon.png
-│   │   ├── portfolio-image.png
-│   │   ├── service-icon-01.png
-│   │   ├── service-icon-02.png
-│   │   ├── service-icon-03.png
-│   │   ├── service-icon-04.png
-│   │   └── services-left-image.png
 │   │
 │   ├── img\
 │   │   ├── bg\
-│   │   │   ├── ...Background image JPGs
-│   │   │
 │   │   └── favicon.png
 │   │
 │   ├── js\
@@ -694,8 +567,6 @@ blog.semikolon.co
 │   │
 │   ├── uploads\
 │   │   └── ft_img\
-│   │       ├── 53bc8b62b10661b9cd935f5cb4d35f73.png
-│   │       └── image_name.png
 │   │
 │   ├── vendor\
 │   │   ├── bootstrap\
@@ -881,15 +752,9 @@ blog.semikolon.co
 │
 ├── storage\
 │   ├── app\
-│   │   ├── public\
-│   │   │   └── .gitignore
-│   │   │
-│   │   └── .gitignore
-│   │
+│   │   └── public\
 │   ├── ebooks\
 │   │   └── 1626435657\
-│   │       └── WhatsApp Image 2021-07-14 at 4.15.20 PM.jpg
-│   │
 │   ├── framework\
 │   │   ├── cache\
 │   │   │   ├── data\
@@ -898,19 +763,12 @@ blog.semikolon.co
 │   │   │   └── .gitignore
 │   │   │
 │   │   ├── sessions\
-│   │   │   └── .gitignore
 │   │   │
 │   │   ├── testing\
-│   │   │   └── .gitignore
 │   │   │
-│   │   ├── views\
-│   │   │   └── .gitignore
-│   │   │
-│   │   └── .gitignore
+│   │   └── views\
 │   │
 │   └── logs\
-│       └── .gitignore
-│
 │
 ├── tests\
 │   ├── Feature\
